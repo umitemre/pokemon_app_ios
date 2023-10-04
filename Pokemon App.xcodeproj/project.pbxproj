@@ -18,6 +18,7 @@
 		3053A21E2ACD63E700EB4CC2 /* Pokemon_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A21D2ACD63E700EB4CC2 /* Pokemon_AppUITestsLaunchTests.swift */; };
 		3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A22B2ACD646800EB4CC2 /* BaseViewController.swift */; };
 		3053A22E2ACD677A00EB4CC2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A22D2ACD677A00EB4CC2 /* SplashViewController.swift */; };
+		3053A2312ACD6E8900EB4CC2 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053A2302ACD6E8900EB4CC2 /* Splash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3053A21D2ACD63E700EB4CC2 /* Pokemon_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3053A22B2ACD646800EB4CC2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3053A22D2ACD677A00EB4CC2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3053A2302ACD6E8900EB4CC2 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +137,19 @@
 		3053A22A2ACD645E00EB4CC2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3053A22F2ACD6E7900EB4CC2 /* Splash */,
 				3053A22B2ACD646800EB4CC2 /* BaseViewController.swift */,
-				3053A22D2ACD677A00EB4CC2 /* SplashViewController.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3053A22F2ACD6E7900EB4CC2 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3053A22D2ACD677A00EB4CC2 /* SplashViewController.swift */,
+				3053A2302ACD6E8900EB4CC2 /* Splash.storyboard */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +259,7 @@
 				3053A2072ACD63E700EB4CC2 /* LaunchScreen.storyboard in Resources */,
 				3053A2042ACD63E700EB4CC2 /* Assets.xcassets in Resources */,
 				3053A2022ACD63E500EB4CC2 /* Main.storyboard in Resources */,
+				3053A2312ACD6E8900EB4CC2 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

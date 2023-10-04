@@ -9,6 +9,6 @@ import Foundation
 
 class SplashViewController: BaseViewController {
     static func instance() -> SplashViewController? {
-        return instance(fromName: "SplashViewController")
+        return instance(fromName: "Splash")
     }
 }

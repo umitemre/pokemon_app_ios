@@ -25,7 +25,6 @@ extension BaseViewController: StoryboardInstantiable {
     }
 
     private static func instance(fromStoryboard storyboard: UIStoryboard) -> Self? {
-        let a = String(describing: Self.self)
         return storyboard.instantiateViewController(identifier: String(describing: Self.self)) as? Self
     }
 }
