@@ -13,6 +13,12 @@ class SplashViewController: BaseViewController {
     // MARK: Outlets
     @IBOutlet private weak var appTitleLabel: UILabel!
     
+    // MARK: MVVM-C Component
+    var coordinator: ApplicationCoordinator? {
+        get { baseCoordinator as? ApplicationCoordinator }
+        set { baseCoordinator = newValue }
+    }
+
     static func instance() -> SplashViewController? {
         return instance(fromName: "Splash")
     }
@@ -73,13 +79,15 @@ private extension SplashViewController {
             self.appTitleLabel.alpha = 1.0
             self.appTitleLabel.transform = .identity
         }) { _ in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-                self?.onAnimationCompleted()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                guard let self else { return }
+                
+                self.onAnimationCompleted()
             }
         }
     }
     
     final func onAnimationCompleted() {
-        // TODO: Use coordinator to route to Home Screen
+        coordinator?.routeToHome()
     }
 }

@@ -11,6 +11,11 @@ import UIKit
 class ApplicationCoordinator: BaseCoordinator {
     override func start() {
         guard let controller = SplashViewController.instance() else { return }
+        controller.coordinator = self
         navigationController?.pushViewController(controller, animated: false)
+    }
+    
+    final func routeToHome() {
+        print("Routing to home...")
     }
 }

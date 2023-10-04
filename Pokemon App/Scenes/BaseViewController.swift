@@ -14,7 +14,8 @@ protocol StoryboardInstantiable {
 
 // MARK: BaseViewController
 class BaseViewController: UIViewController {
-
+    // MARK: MVVM-C Components
+    var baseCoordinator: BaseCoordinatorProtocol?
 }
 
 // MARK: StoryboardInstantiable
