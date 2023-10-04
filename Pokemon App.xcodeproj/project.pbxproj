@@ -19,6 +19,7 @@
 		3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A22B2ACD646800EB4CC2 /* BaseViewController.swift */; };
 		3053A22E2ACD677A00EB4CC2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A22D2ACD677A00EB4CC2 /* SplashViewController.swift */; };
 		3053A2312ACD6E8900EB4CC2 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053A2302ACD6E8900EB4CC2 /* Splash.storyboard */; };
+		3053A2342ACD71B100EB4CC2 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 3053A2332ACD71B100EB4CC2 /* Reachability */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3053A2342ACD71B100EB4CC2 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +170,9 @@
 			dependencies = (
 			);
 			name = "Pokemon App";
+			packageProductDependencies = (
+				3053A2332ACD71B100EB4CC2 /* Reachability */,
+			);
 			productName = "Pokemon App";
 			productReference = 3053A1F72ACD63E500EB4CC2 /* Pokemon App.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 3053A1EE2ACD63E500EB4CC2;
+			packageReferences = (
+				3053A2322ACD71B100EB4CC2 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			productRefGroup = 3053A1F82ACD63E500EB4CC2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -635,6 +643,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3053A2322ACD71B100EB4CC2 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3053A2332ACD71B100EB4CC2 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3053A2322ACD71B100EB4CC2 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3053A1EF2ACD63E500EB4CC2 /* Project object */;
 }
