@@ -20,6 +20,8 @@
 		3053A22E2ACD677A00EB4CC2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A22D2ACD677A00EB4CC2 /* SplashViewController.swift */; };
 		3053A2312ACD6E8900EB4CC2 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053A2302ACD6E8900EB4CC2 /* Splash.storyboard */; };
 		3053A2342ACD71B100EB4CC2 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 3053A2332ACD71B100EB4CC2 /* Reachability */; };
+		3053A2372ACD791C00EB4CC2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A2362ACD791C00EB4CC2 /* BaseCoordinator.swift */; };
+		3053A2392ACD795400EB4CC2 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A2382ACD795400EB4CC2 /* ApplicationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		3053A22B2ACD646800EB4CC2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3053A22D2ACD677A00EB4CC2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3053A2302ACD6E8900EB4CC2 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		3053A2362ACD791C00EB4CC2 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		3053A2382ACD795400EB4CC2 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		3053A1F92ACD63E500EB4CC2 /* Pokemon App */ = {
 			isa = PBXGroup;
 			children = (
+				3053A2352ACD791200EB4CC2 /* Coordinator */,
 				3053A22A2ACD645E00EB4CC2 /* Scenes */,
 				3053A1FA2ACD63E500EB4CC2 /* AppDelegate.swift */,
 				3053A1FC2ACD63E500EB4CC2 /* SceneDelegate.swift */,
@@ -152,6 +157,15 @@
 				3053A2302ACD6E8900EB4CC2 /* Splash.storyboard */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		3053A2352ACD791200EB4CC2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3053A2362ACD791C00EB4CC2 /* BaseCoordinator.swift */,
+				3053A2382ACD795400EB4CC2 /* ApplicationCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3053A1FF2ACD63E500EB4CC2 /* ViewController.swift in Sources */,
+				3053A2372ACD791C00EB4CC2 /* BaseCoordinator.swift in Sources */,
 				3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */,
 				3053A1FB2ACD63E500EB4CC2 /* AppDelegate.swift in Sources */,
 				3053A1FD2ACD63E500EB4CC2 /* SceneDelegate.swift in Sources */,
 				3053A22E2ACD677A00EB4CC2 /* SplashViewController.swift in Sources */,
+				3053A2392ACD795400EB4CC2 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

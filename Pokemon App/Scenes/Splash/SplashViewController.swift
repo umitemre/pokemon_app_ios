@@ -80,6 +80,6 @@ private extension SplashViewController {
     }
     
     final func onAnimationCompleted() {
-        
+        // TODO: Use coordinator to route to Home Screen
     }
 }
