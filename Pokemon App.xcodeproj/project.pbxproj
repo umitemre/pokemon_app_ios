@@ -28,6 +28,8 @@
 		3053A2462ACD96B100EB4CC2 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053A2452ACD96B100EB4CC2 /* Search.storyboard */; };
 		3053A2482ACD983000EB4CC2 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053A2472ACD983000EB4CC2 /* Favorites.storyboard */; };
 		3053A24A2ACD983900EB4CC2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A2492ACD983900EB4CC2 /* FavoritesViewController.swift */; };
+		30802DD72ACDE5B100686A35 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DD62ACDE5B100686A35 /* BaseViewModel.swift */; };
+		30802DDC2ACDE77D00686A35 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 30802DDB2ACDE77D00686A35 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,7 @@
 		3053A2452ACD96B100EB4CC2 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		3053A2472ACD983000EB4CC2 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		3053A2492ACD983900EB4CC2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		30802DD62ACDE5B100686A35 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30802DDC2ACDE77D00686A35 /* RxSwift in Frameworks */,
 				3053A2342ACD71B100EB4CC2 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +111,7 @@
 				3053A2102ACD63E700EB4CC2 /* Pokemon AppTests */,
 				3053A21A2ACD63E700EB4CC2 /* Pokemon AppUITests */,
 				3053A1F82ACD63E500EB4CC2 /* Products */,
+				30802DDA2ACDE77D00686A35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +130,7 @@
 			children = (
 				3053A2352ACD791200EB4CC2 /* Coordinator */,
 				3053A22A2ACD645E00EB4CC2 /* Scenes */,
+				30802DD52ACDE59F00686A35 /* ViewModel */,
 				3053A1FA2ACD63E500EB4CC2 /* AppDelegate.swift */,
 				3053A1FC2ACD63E500EB4CC2 /* SceneDelegate.swift */,
 				3053A1FE2ACD63E500EB4CC2 /* ViewController.swift */,
@@ -210,6 +216,21 @@
 			path = Favorites;
 			sourceTree = "<group>";
 		};
+		30802DD52ACDE59F00686A35 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30802DD62ACDE5B100686A35 /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30802DDA2ACDE77D00686A35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +249,7 @@
 			name = "Pokemon App";
 			packageProductDependencies = (
 				3053A2332ACD71B100EB4CC2 /* Reachability */,
+				30802DDB2ACDE77D00686A35 /* RxSwift */,
 			);
 			productName = "Pokemon App";
 			productReference = 3053A1F72ACD63E500EB4CC2 /* Pokemon App.app */;
@@ -303,6 +325,7 @@
 			mainGroup = 3053A1EE2ACD63E500EB4CC2;
 			packageReferences = (
 				3053A2322ACD71B100EB4CC2 /* XCRemoteSwiftPackageReference "Reachability" */,
+				30802DD92ACDE6E000686A35 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 3053A1F82ACD63E500EB4CC2 /* Products */;
 			projectDirPath = "";
@@ -355,6 +378,7 @@
 				3053A2372ACD791C00EB4CC2 /* BaseCoordinator.swift in Sources */,
 				3053A2402ACD7D0D00EB4CC2 /* HomeCoordinator.swift in Sources */,
 				3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */,
+				30802DD72ACDE5B100686A35 /* BaseViewModel.swift in Sources */,
 				3053A23C2ACD7C9E00EB4CC2 /* HomeViewController.swift in Sources */,
 				3053A24A2ACD983900EB4CC2 /* FavoritesViewController.swift in Sources */,
 				3053A1FB2ACD63E500EB4CC2 /* AppDelegate.swift in Sources */,
@@ -717,6 +741,14 @@
 				kind = branch;
 			};
 		};
+		30802DD92ACDE6E000686A35 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -724,6 +756,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3053A2322ACD71B100EB4CC2 /* XCRemoteSwiftPackageReference "Reachability" */;
 			productName = Reachability;
+		};
+		30802DDB2ACDE77D00686A35 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30802DD92ACDE6E000686A35 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

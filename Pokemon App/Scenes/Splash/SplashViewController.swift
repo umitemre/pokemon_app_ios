@@ -24,6 +24,7 @@ class SplashViewController: BaseViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         configureUI()
         checkInternetConnection()
     }
@@ -78,7 +79,11 @@ private extension SplashViewController {
 
             self.appTitleLabel.alpha = 1.0
             self.appTitleLabel.transform = .identity
-        }) { _ in
+        }) { [weak self] _ in
+            guard let self else { return }
+
+            self.showLoading()
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
                 guard let self else { return }
                 
@@ -88,6 +93,7 @@ private extension SplashViewController {
     }
     
     final func onAnimationCompleted() {
+        hideLoading()
         coordinator?.routeToHome()
     }
 }

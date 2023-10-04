@@ -26,8 +26,8 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="arX-F0-fzV" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="HbE-3Z-hAx"/>
-                            <constraint firstItem="arX-F0-fzV" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="Yms-BD-l2k"/>
+                            <constraint firstItem="arX-F0-fzV" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="FGa-eP-GIz"/>
+                            <constraint firstItem="arX-F0-fzV" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="dyu-qO-hZh"/>
                         </constraints>
                     </view>
                     <connections>
