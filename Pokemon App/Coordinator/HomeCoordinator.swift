@@ -13,8 +13,8 @@ class HomeCoordinator: BaseCoordinator {
         guard let controller = HomeViewController.instance() else { return }
         controller.coordinator = self
         
-        let rootNavigationController = UINavigationController(rootViewController: controller)
-        getSceneDelegate()?.window?.rootViewController = rootNavigationController
+        navigationController = UINavigationController(rootViewController: controller)
+        getSceneDelegate()?.window?.rootViewController = navigationController
     }
 }
 
