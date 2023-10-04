@@ -24,6 +24,10 @@
 		3053A2392ACD795400EB4CC2 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A2382ACD795400EB4CC2 /* ApplicationCoordinator.swift */; };
 		3053A23C2ACD7C9E00EB4CC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A23B2ACD7C9E00EB4CC2 /* HomeViewController.swift */; };
 		3053A2402ACD7D0D00EB4CC2 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A23F2ACD7D0D00EB4CC2 /* HomeCoordinator.swift */; };
+		3053A2442ACD93D700EB4CC2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A2432ACD93D700EB4CC2 /* SearchViewController.swift */; };
+		3053A2462ACD96B100EB4CC2 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053A2452ACD96B100EB4CC2 /* Search.storyboard */; };
+		3053A2482ACD983000EB4CC2 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053A2472ACD983000EB4CC2 /* Favorites.storyboard */; };
+		3053A24A2ACD983900EB4CC2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A2492ACD983900EB4CC2 /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		3053A2382ACD795400EB4CC2 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		3053A23B2ACD7C9E00EB4CC2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3053A23F2ACD7D0D00EB4CC2 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		3053A2432ACD93D700EB4CC2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3053A2452ACD96B100EB4CC2 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		3053A2472ACD983000EB4CC2 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		3053A2492ACD983900EB4CC2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,9 +185,29 @@
 		3053A23A2ACD7C9000EB4CC2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3053A2412ACD936800EB4CC2 /* Search */,
+				3053A2422ACD936D00EB4CC2 /* Favorites */,
 				3053A23B2ACD7C9E00EB4CC2 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3053A2412ACD936800EB4CC2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3053A2432ACD93D700EB4CC2 /* SearchViewController.swift */,
+				3053A2452ACD96B100EB4CC2 /* Search.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		3053A2422ACD936D00EB4CC2 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				3053A2492ACD983900EB4CC2 /* FavoritesViewController.swift */,
+				3053A2472ACD983000EB4CC2 /* Favorites.storyboard */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,8 +322,10 @@
 			files = (
 				3053A2072ACD63E700EB4CC2 /* LaunchScreen.storyboard in Resources */,
 				3053A2042ACD63E700EB4CC2 /* Assets.xcassets in Resources */,
+				3053A2482ACD983000EB4CC2 /* Favorites.storyboard in Resources */,
 				3053A2022ACD63E500EB4CC2 /* Main.storyboard in Resources */,
 				3053A2312ACD6E8900EB4CC2 /* Splash.storyboard in Resources */,
+				3053A2462ACD96B100EB4CC2 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,11 +350,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3053A2442ACD93D700EB4CC2 /* SearchViewController.swift in Sources */,
 				3053A1FF2ACD63E500EB4CC2 /* ViewController.swift in Sources */,
 				3053A2372ACD791C00EB4CC2 /* BaseCoordinator.swift in Sources */,
 				3053A2402ACD7D0D00EB4CC2 /* HomeCoordinator.swift in Sources */,
 				3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */,
 				3053A23C2ACD7C9E00EB4CC2 /* HomeViewController.swift in Sources */,
+				3053A24A2ACD983900EB4CC2 /* FavoritesViewController.swift in Sources */,
 				3053A1FB2ACD63E500EB4CC2 /* AppDelegate.swift in Sources */,
 				3053A1FD2ACD63E500EB4CC2 /* SceneDelegate.swift in Sources */,
 				3053A22E2ACD677A00EB4CC2 /* SplashViewController.swift in Sources */,
