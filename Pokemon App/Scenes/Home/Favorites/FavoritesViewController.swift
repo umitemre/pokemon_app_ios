@@ -19,5 +19,15 @@ class FavoritesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
+    }
+}
+
+// MARK: Configuration
+private extension FavoritesViewController {
+    final func configureUI() {
+        title = "Favorites"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

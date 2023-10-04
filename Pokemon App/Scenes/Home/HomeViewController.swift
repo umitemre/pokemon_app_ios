@@ -36,16 +36,15 @@ private extension HomeViewController{
     final func configureUI() {
         view.backgroundColor = .white
         
-        title = "Pokemon App"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isHidden = true
 
         configureTabBar()
     }
     
     final func configureTabBar() {
         mainTabController.viewControllers = [
-            self.searchViewController!,
-            self.favoritesViewController!
+            createNavigationController(for: self.searchViewController!),
+            createNavigationController(for: self.favoritesViewController!),
         ]
         mainTabController.selectedIndex = 0
 

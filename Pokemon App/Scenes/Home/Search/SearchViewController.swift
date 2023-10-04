@@ -19,5 +19,15 @@ class SearchViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
+    }
+}
+
+// MARK: Configuration
+private extension SearchViewController {
+    final func configureUI() {
+        title = "Search"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
