@@ -8,14 +8,14 @@
 import UIKit
 
 protocol BaseCoordinatorProtocol: AnyObject {
-    var childCoordinators: [BaseCoordinator]? { get set }
+    var childCoordinators: [BaseCoordinator] { get set }
     var navigationController: UINavigationController? { get set }
 
     func start()
 }
 
 class BaseCoordinator: BaseCoordinatorProtocol {
-    var childCoordinators: [BaseCoordinator]?
+    var childCoordinators: [BaseCoordinator] = []
     var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController? = nil) {

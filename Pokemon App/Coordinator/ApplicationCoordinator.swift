@@ -16,6 +16,8 @@ class ApplicationCoordinator: BaseCoordinator {
     }
     
     final func routeToHome() {
-        print("Routing to home...")
+        let coordinator = HomeCoordinator()
+        childCoordinators.append(coordinator)
+        coordinator.start()
     }
 }
