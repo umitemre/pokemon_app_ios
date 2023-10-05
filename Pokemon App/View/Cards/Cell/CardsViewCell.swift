@@ -8,6 +8,10 @@
 import UIKit
 
 // MARK: CardsViewCell
+protocol CardsViewCellLongPressDelegate: AnyObject {
+    func didLongPress(_ card: Card?)
+}
+
 class CardsViewCell: UICollectionViewCell {
     // MARK: Outlets
     @IBOutlet private weak var imageView: UIImageView!
@@ -22,6 +26,22 @@ class CardsViewCell: UICollectionViewCell {
 
             titleLabel.text = card?.name ?? ""
             hpLabel.text = "HP: \(card?.hp ?? "")"
+        }
+    }
+    
+    weak var delegate: CardsViewCellLongPressDelegate?
+    
+    override func awakeFromNib() {
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        self.addGestureRecognizer(longPressRecognizer)
+    }
+}
+
+// MARK: Actions
+extension CardsViewCell {
+    @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        if gestureRecognizer.state == .began {
+            delegate?.didLongPress(self.card)
         }
     }
 }

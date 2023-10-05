@@ -84,6 +84,10 @@ extension CardsView: UICollectionViewDelegateFlowLayout {
         
         return CGSize(width: cellWidth, height: cellHeight)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("didSelectItemAt: \(indexPath.row)")
+    }
 }
 
 // MARK: UICollectionViewDataSource
@@ -98,8 +102,15 @@ extension CardsView: UICollectionViewDataSource {
         }
         
         let data = cardsResult?.cards?[indexPath.row]
+        cell.delegate = self
         cell.setData(data)
 
         return cell
+    }
+}
+
+extension CardsView: CardsViewCellLongPressDelegate {
+    func didLongPress(_ card: Card?) {
+        
     }
 }
