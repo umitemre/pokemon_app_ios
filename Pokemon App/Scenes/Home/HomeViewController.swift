@@ -9,8 +9,8 @@ import UIKit
 
 // MARK: HomeViewController
 class HomeViewController: BaseViewController {
-    private let searchViewController = SearchViewController.instance()
-    private let favoritesViewController = FavoritesViewController.instance()
+    var searchViewController: SearchViewController?
+    var favoritesViewController: FavoritesViewController?
 
     private let mainTabController = UITabBarController()
 
@@ -42,9 +42,12 @@ private extension HomeViewController{
     }
     
     final func configureTabBar() {
+        guard let searchViewController,
+              let favoritesViewController else { return }
+
         mainTabController.viewControllers = [
-            createNavigationController(for: self.searchViewController!),
-            createNavigationController(for: self.favoritesViewController!),
+            createNavigationController(for: searchViewController),
+            createNavigationController(for: favoritesViewController),
         ]
         mainTabController.selectedIndex = 0
 

@@ -39,6 +39,7 @@
 		30802DFC2ACECE9200686A35 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DFB2ACECE9200686A35 /* CardRepository.swift */; };
 		30802DFF2ACED0A800686A35 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DFE2ACED0A800686A35 /* SearchResultsViewController.swift */; };
 		30802E012ACED0B200686A35 /* SearchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30802E002ACED0B200686A35 /* SearchResults.storyboard */; };
+		30802E032ACEDB6C00686A35 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E022ACEDB6C00686A35 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		30802DFB2ACECE9200686A35 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 		30802DFE2ACED0A800686A35 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		30802E002ACED0B200686A35 /* SearchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResults.storyboard; sourceTree = "<group>"; };
+		30802E022ACEDB6C00686A35 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				30802DD62ACDE5B100686A35 /* BaseViewModel.swift */,
+				30802E022ACEDB6C00686A35 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				3053A2372ACD791C00EB4CC2 /* BaseCoordinator.swift in Sources */,
 				3053A2402ACD7D0D00EB4CC2 /* HomeCoordinator.swift in Sources */,
 				3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */,
+				30802E032ACEDB6C00686A35 /* SearchViewModel.swift in Sources */,
 				30802DD72ACDE5B100686A35 /* BaseViewModel.swift in Sources */,
 				30802DFC2ACECE9200686A35 /* CardRepository.swift in Sources */,
 				3053A23C2ACD7C9E00EB4CC2 /* HomeViewController.swift in Sources */,

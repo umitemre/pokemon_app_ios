@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: FavoritesViewController
 class FavoritesViewController: BaseViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)

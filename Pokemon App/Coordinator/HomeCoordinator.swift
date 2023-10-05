@@ -12,6 +12,8 @@ class HomeCoordinator: BaseCoordinator {
     override func start() {
         guard let controller = HomeViewController.instance() else { return }
         controller.coordinator = self
+        controller.searchViewController = getSearchController()
+        controller.favoritesViewController = getFavoritesController()
         
         navigationController = UINavigationController(rootViewController: controller)
         getSceneDelegate()?.window?.rootViewController = navigationController
@@ -20,12 +22,26 @@ class HomeCoordinator: BaseCoordinator {
 
 // MARK: Private
 private extension HomeCoordinator {
-    func getSceneDelegate() -> SceneDelegate? {
+    final func getSceneDelegate() -> SceneDelegate? {
         let application = UIApplication.shared
 
         guard let windowScene = application.connectedScenes.first as? UIWindowScene else { return nil }
         guard let sceneDelegate = windowScene.delegate as? SceneDelegate else { return nil }
 
         return sceneDelegate
+    }
+    
+    final func getSearchController() -> SearchViewController? {
+        let controller = SearchViewController.instance()
+        let repository = CardRepository()
+        let viewModel = SearchViewModel(repository: repository)
+        controller?.viewModel = viewModel
+        
+        return controller
+    }
+    
+    final func getFavoritesController() -> FavoritesViewController? {
+        let controller = FavoritesViewController.instance()
+        return controller
     }
 }

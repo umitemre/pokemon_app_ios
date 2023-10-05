@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import RxSwift
 
 // MARK: SearchViewController
 class SearchViewController: BaseViewController {
+    private let disposeBag = DisposeBag()
     private var searchTimer: Timer?
+    
+    // MARK: MVVM-C Components
+    var viewModel: SearchViewModelInput? {
+        get { baseVM as? SearchViewModelInput }
+        set { baseVM = newValue }
+    }
 
     // MARK: UI Components
     private let searchController: UISearchController = {
@@ -32,6 +40,14 @@ class SearchViewController: BaseViewController {
         super.viewDidLoad()
         
         configureUI()
+        setObservers()
+    }
+    
+    final func setObservers() {
+        viewModel?.searchResultDidChange.subscribe { [weak self] data in
+            let results = data.element
+            print(results)
+        }.disposed(by: disposeBag)
     }
 }
 
@@ -52,9 +68,11 @@ private extension SearchViewController {
     }
 }
 
+// MARK: Private
 private extension SearchViewController {
     final func performSearch(_ query: String) {
-        // TODO: Perform a search
+        guard let hp = Int(query) else { return }
+        viewModel?.fetchSearchResults(hp: hp)
     }
 }
 

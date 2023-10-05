@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: SearchResultsViewController
 class SearchResultsViewController: BaseViewController {
     static func instance() -> SearchResultsViewController? {
         return instance(fromName: "SearchResults")
