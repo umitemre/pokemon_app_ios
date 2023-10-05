@@ -34,6 +34,9 @@
 		30802DEE2ACEB03000686A35 /* CardsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30802DED2ACEB03000686A35 /* CardsViewCell.xib */; };
 		30802DF02ACEC2D400686A35 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DEF2ACEC2D400686A35 /* UIImageView+Extensions.swift */; };
 		30802DF32ACEC2FC00686A35 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 30802DF22ACEC2FC00686A35 /* AlamofireImage */; };
+		30802DF62ACECAF900686A35 /* CardsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DF52ACECAF900686A35 /* CardsResult.swift */; };
+		30802DF92ACECE2C00686A35 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DF82ACECE2C00686A35 /* NetworkLayer.swift */; };
+		30802DFC2ACECE9200686A35 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DFB2ACECE9200686A35 /* CardRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		30802DEB2ACEAFCE00686A35 /* CardsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewCell.swift; sourceTree = "<group>"; };
 		30802DED2ACEB03000686A35 /* CardsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsViewCell.xib; sourceTree = "<group>"; };
 		30802DEF2ACEC2D400686A35 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		30802DF52ACECAF900686A35 /* CardsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsResult.swift; sourceTree = "<group>"; };
+		30802DF82ACECE2C00686A35 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		30802DFB2ACECE9200686A35 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,8 @@
 			children = (
 				3053A2352ACD791200EB4CC2 /* Coordinator */,
 				3053A22A2ACD645E00EB4CC2 /* Scenes */,
+				30802DF42ACECAE600686A35 /* Model */,
+				30802DF72ACECE1B00686A35 /* Network */,
 				30802DD52ACDE59F00686A35 /* ViewModel */,
 				30802DDD2ACE0A6500686A35 /* View */,
 				30802DE12ACE14AF00686A35 /* Extensions */,
@@ -272,6 +280,31 @@
 				30802DED2ACEB03000686A35 /* CardsViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		30802DF42ACECAE600686A35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30802DFA2ACECE8100686A35 /* Repository */,
+				30802DF52ACECAF900686A35 /* CardsResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30802DF72ACECE1B00686A35 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				30802DF82ACECE2C00686A35 /* NetworkLayer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		30802DFA2ACECE8100686A35 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				30802DFB2ACECE9200686A35 /* CardRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,10 +458,13 @@
 				3053A2402ACD7D0D00EB4CC2 /* HomeCoordinator.swift in Sources */,
 				3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */,
 				30802DD72ACDE5B100686A35 /* BaseViewModel.swift in Sources */,
+				30802DFC2ACECE9200686A35 /* CardRepository.swift in Sources */,
 				3053A23C2ACD7C9E00EB4CC2 /* HomeViewController.swift in Sources */,
+				30802DF62ACECAF900686A35 /* CardsResult.swift in Sources */,
 				30802DEC2ACEAFCE00686A35 /* CardsViewCell.swift in Sources */,
 				30802DE02ACE0EC600686A35 /* CardsView.swift in Sources */,
 				3053A24A2ACD983900EB4CC2 /* FavoritesViewController.swift in Sources */,
+				30802DF92ACECE2C00686A35 /* NetworkLayer.swift in Sources */,
 				3053A1FB2ACD63E500EB4CC2 /* AppDelegate.swift in Sources */,
 				3053A1FD2ACD63E500EB4CC2 /* SceneDelegate.swift in Sources */,
 				3053A22E2ACD677A00EB4CC2 /* SplashViewController.swift in Sources */,
