@@ -17,6 +17,13 @@ class CardsView: UIView {
     // MARK: Contants
     private let cellWidth: CGFloat = 120
     private let cellHeight: CGFloat = 232
+    
+    // MARK: Data
+    private var cardsResult: CardsResult? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -64,6 +71,14 @@ private extension CardsView {
     }
 }
 
+// MARK: Public
+extension CardsView {
+    final func setCardsResult(_ cardsResults: CardsResult?) {
+        self.cardsResult = cardsResults
+    }
+}
+
+// MARK: UICollectionViewDelegateFlowLayout
 extension CardsView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -71,15 +86,19 @@ extension CardsView: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: UICollectionViewDataSource
 extension CardsView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return cardsResult?.cards?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.identifier, for: indexPath) as? Cell else {
             fatalError("Can't dequeued reusable cell: \(Cell.identifier)")
         }
+        
+        let data = cardsResult?.cards?[indexPath.row]
+        cell.setData(data)
 
         return cell
     }

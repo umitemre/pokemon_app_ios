@@ -7,12 +7,28 @@
 
 import UIKit
 
+// MARK: CardsViewCell
 class CardsViewCell: UICollectionViewCell {
+    // MARK: Outlets
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var hpLabel: UILabel!
     
-    override func awakeFromNib() {
-        imageView.loadImageFromUrl("https://images.pokemontcg.io/swsh4/175.png")
+    // MARK: Data
+    private var card: Card? {
+        didSet {
+            guard let imageURL = card?.imageURL else { return }
+            imageView.loadImageFromUrl(imageURL)
+
+            titleLabel.text = card?.name ?? ""
+            hpLabel.text = "HP: \(card?.hp ?? "")"
+        }
+    }
+}
+
+// MARK: Public
+extension CardsViewCell {
+    final func setData(_ card: Card?) {
+        self.card = card
     }
 }

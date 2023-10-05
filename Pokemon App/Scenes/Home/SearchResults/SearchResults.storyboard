@@ -39,6 +39,10 @@
                             <constraint firstItem="WZX-id-Itj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="rIL-pH-q5n"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardsView" destination="X5T-qI-Hat" id="Kq7-c0-vj9"/>
+                        <outlet property="resultsCountLabel" destination="WZX-id-Itj" id="lNi-v5-wnm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

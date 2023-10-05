@@ -45,8 +45,10 @@ class SearchViewController: BaseViewController {
     
     final func setObservers() {
         viewModel?.searchResultDidChange.subscribe { [weak self] data in
+            guard let self else { return }
+
             let results = data.element
-            print(results)
+            self.getResultsViewController().setSearchResults(results)
         }.disposed(by: disposeBag)
     }
 }
@@ -74,6 +76,10 @@ private extension SearchViewController {
         guard let hp = Int(query) else { return }
         viewModel?.fetchSearchResults(hp: hp)
     }
+    
+    final func getResultsViewController() -> SearchResultsViewController {
+        return searchController.searchResultsController as! SearchResultsViewController
+    }
 }
 
 // MARK: UISearchResultsUpdating
@@ -85,7 +91,7 @@ extension SearchViewController: UISearchResultsUpdating {
 
         if text.count == 0 {
             print("updateSearchResults: no query text provided")
-            // getResultsViewController().resetUI()
+            getResultsViewController().resetUI()
             return
         }
     }
@@ -102,6 +108,8 @@ extension SearchViewController: UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        getResultsViewController().resetUI()
+
         searchTimer?.invalidate()
         
         searchTimer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { [weak self] _ in
