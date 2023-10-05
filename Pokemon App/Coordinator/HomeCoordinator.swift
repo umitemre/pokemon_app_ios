@@ -20,6 +20,14 @@ class HomeCoordinator: BaseCoordinator {
     }
 }
 
+// MARK: Public
+extension HomeCoordinator{
+    final func routeToCardDetail(_ card: Card) {
+        guard let controller = CardDetailViewController.instance(withCard: card) else { return }
+        navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
 // MARK: Private
 private extension HomeCoordinator {
     final func getSceneDelegate() -> SceneDelegate? {
@@ -36,6 +44,7 @@ private extension HomeCoordinator {
         let repository = CardRepository()
         let viewModel = SearchViewModel(repository: repository)
         controller?.viewModel = viewModel
+        controller?.coordinator = self
         
         return controller
     }

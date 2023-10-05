@@ -18,6 +18,12 @@ class SearchViewController: BaseViewController {
         get { baseVM as? SearchViewModelInput }
         set { baseVM = newValue }
     }
+    
+    var coordinator: HomeCoordinator? {
+        didSet {
+            getResultsViewController().coordinator = coordinator
+        }
+    }
 
     // MARK: UI Components
     private let searchController: UISearchController = {
@@ -90,7 +96,6 @@ extension SearchViewController: UISearchResultsUpdating {
         }
 
         if text.count == 0 {
-            print("updateSearchResults: no query text provided")
             getResultsViewController().resetUI()
             return
         }

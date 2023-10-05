@@ -29,14 +29,16 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         configureUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
 }
 
 // MARK: Configuration
 private extension HomeViewController{
     final func configureUI() {
         view.backgroundColor = .white
-        
-        navigationController?.navigationBar.isHidden = true
 
         configureTabBar()
     }

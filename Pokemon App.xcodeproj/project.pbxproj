@@ -40,6 +40,8 @@
 		30802DFF2ACED0A800686A35 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DFE2ACED0A800686A35 /* SearchResultsViewController.swift */; };
 		30802E012ACED0B200686A35 /* SearchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30802E002ACED0B200686A35 /* SearchResults.storyboard */; };
 		30802E032ACEDB6C00686A35 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E022ACEDB6C00686A35 /* SearchViewModel.swift */; };
+		30802E062ACEF4BA00686A35 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E052ACEF4BA00686A35 /* CardDetailViewController.swift */; };
+		30802E082ACEF4C300686A35 /* CardDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30802E072ACEF4C300686A35 /* CardDetailView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		30802DFE2ACED0A800686A35 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		30802E002ACED0B200686A35 /* SearchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResults.storyboard; sourceTree = "<group>"; };
 		30802E022ACEDB6C00686A35 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		30802E052ACEF4BA00686A35 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		30802E072ACEF4C300686A35 /* CardDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardDetailView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 			children = (
 				3053A22F2ACD6E7900EB4CC2 /* Splash */,
 				3053A23A2ACD7C9000EB4CC2 /* Home */,
+				30802E042ACEF4A900686A35 /* CardDetail */,
 				3053A22B2ACD646800EB4CC2 /* BaseViewController.swift */,
 			);
 			path = Scenes;
@@ -324,6 +329,15 @@
 			path = SearchResults;
 			sourceTree = "<group>";
 		};
+		30802E042ACEF4A900686A35 /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				30802E052ACEF4BA00686A35 /* CardDetailViewController.swift */,
+				30802E072ACEF4C300686A35 /* CardDetailView.storyboard */,
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -438,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30802E082ACEF4C300686A35 /* CardDetailView.storyboard in Resources */,
 				3053A2042ACD63E700EB4CC2 /* Assets.xcassets in Resources */,
 				3053A2482ACD983000EB4CC2 /* Favorites.storyboard in Resources */,
 				30802DEE2ACEB03000686A35 /* CardsViewCell.xib in Resources */,
@@ -482,6 +497,7 @@
 				30802DF62ACECAF900686A35 /* CardsResult.swift in Sources */,
 				30802DEC2ACEAFCE00686A35 /* CardsViewCell.swift in Sources */,
 				30802DE02ACE0EC600686A35 /* CardsView.swift in Sources */,
+				30802E062ACEF4BA00686A35 /* CardDetailViewController.swift in Sources */,
 				30802DFF2ACED0A800686A35 /* SearchResultsViewController.swift in Sources */,
 				3053A24A2ACD983900EB4CC2 /* FavoritesViewController.swift in Sources */,
 				30802DF92ACECE2C00686A35 /* NetworkLayer.swift in Sources */,

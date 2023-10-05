@@ -14,6 +14,9 @@ class SearchResultsViewController: BaseViewController {
     @IBOutlet private weak var resultsCountLabel: UILabel!
     @IBOutlet private weak var cardsView: CardsView!
 
+    // MARK: MVVM-C Components
+    var coordinator: HomeCoordinator?
+
     // MARK: Data
     private var cardsResult: CardsResult? {
         didSet {
@@ -35,6 +38,23 @@ class SearchResultsViewController: BaseViewController {
     static func instance() -> SearchResultsViewController? {
         return instance(fromName: "SearchResults")
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configureUI()
+    }
+}
+
+// MARK: Configuration
+private extension SearchResultsViewController {
+    final func configureUI() {
+        configureCardsView()
+    }
+    
+    final func configureCardsView() {
+        cardsView.delegate = self
+    }
 }
 
 // MARK: Public
@@ -46,5 +66,18 @@ extension SearchResultsViewController {
     final func resetUI() {
         self.cardsResult = nil
         self.resultsCountLabel.isHidden = true
+    }
+}
+
+// MARK: CardsViewDelegate
+extension SearchResultsViewController: CardsViewDelegate {
+    func didTapItem(_ card: Card?) {
+        guard let card else { return }
+
+        coordinator?.routeToCardDetail(card)
+    }
+
+    func didLongPressItem(_ card: Card?) {
+        print("didLongPressItem")
     }
 }
