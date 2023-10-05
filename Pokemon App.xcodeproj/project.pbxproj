@@ -37,6 +37,8 @@
 		30802DF62ACECAF900686A35 /* CardsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DF52ACECAF900686A35 /* CardsResult.swift */; };
 		30802DF92ACECE2C00686A35 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DF82ACECE2C00686A35 /* NetworkLayer.swift */; };
 		30802DFC2ACECE9200686A35 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DFB2ACECE9200686A35 /* CardRepository.swift */; };
+		30802DFF2ACED0A800686A35 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DFE2ACED0A800686A35 /* SearchResultsViewController.swift */; };
+		30802E012ACED0B200686A35 /* SearchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30802E002ACED0B200686A35 /* SearchResults.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		30802DF52ACECAF900686A35 /* CardsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsResult.swift; sourceTree = "<group>"; };
 		30802DF82ACECE2C00686A35 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		30802DFB2ACECE9200686A35 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
+		30802DFE2ACED0A800686A35 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		30802E002ACED0B200686A35 /* SearchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResults.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,7 @@
 		3053A23A2ACD7C9000EB4CC2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				30802DFD2ACED09A00686A35 /* SearchResults */,
 				3053A2412ACD936800EB4CC2 /* Search */,
 				3053A2422ACD936D00EB4CC2 /* Favorites */,
 				3053A23B2ACD7C9E00EB4CC2 /* HomeViewController.swift */,
@@ -305,6 +310,15 @@
 				30802DFB2ACECE9200686A35 /* CardRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		30802DFD2ACED09A00686A35 /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				30802DFE2ACED0A800686A35 /* SearchResultsViewController.swift */,
+				30802E002ACED0B200686A35 /* SearchResults.storyboard */,
+			);
+			path = SearchResults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +439,7 @@
 				3053A2482ACD983000EB4CC2 /* Favorites.storyboard in Resources */,
 				30802DEE2ACEB03000686A35 /* CardsViewCell.xib in Resources */,
 				3053A2312ACD6E8900EB4CC2 /* Splash.storyboard in Resources */,
+				30802E012ACED0B200686A35 /* SearchResults.storyboard in Resources */,
 				30802DE92ACE2C9700686A35 /* CardsView.xib in Resources */,
 				3053A2462ACD96B100EB4CC2 /* Search.storyboard in Resources */,
 			);
@@ -463,6 +478,7 @@
 				30802DF62ACECAF900686A35 /* CardsResult.swift in Sources */,
 				30802DEC2ACEAFCE00686A35 /* CardsViewCell.swift in Sources */,
 				30802DE02ACE0EC600686A35 /* CardsView.swift in Sources */,
+				30802DFF2ACED0A800686A35 /* SearchResultsViewController.swift in Sources */,
 				3053A24A2ACD983900EB4CC2 /* FavoritesViewController.swift in Sources */,
 				30802DF92ACECE2C00686A35 /* NetworkLayer.swift in Sources */,
 				3053A1FB2ACD63E500EB4CC2 /* AppDelegate.swift in Sources */,
