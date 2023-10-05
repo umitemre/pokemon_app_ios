@@ -16,18 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCr-07-nai">
-                                <rect key="frame" x="162" y="428" width="69" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myv-NF-IwI" customClass="CardsView" customModule="Pokemon_App" customModuleProvider="target">
+                                <rect key="frame" x="8" y="67" width="377" height="743"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZCr-07-nai" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Uj7-yf-Yts"/>
-                            <constraint firstItem="ZCr-07-nai" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="bZe-Pl-yf4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="myv-NF-IwI" secondAttribute="bottom" constant="8" id="OgQ-mB-krz"/>
+                            <constraint firstItem="myv-NF-IwI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="Z0l-cy-bep"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="myv-NF-IwI" secondAttribute="trailing" constant="8" id="uYf-13-8mE"/>
+                            <constraint firstItem="myv-NF-IwI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="utd-8z-vbe"/>
                         </constraints>
                     </view>
                 </viewController>
