@@ -15,35 +15,35 @@ enum ErrorMock: Error {
 
 // MARK: CardRepositoryMock
 class CardRepositoryMock: CardRepository {
-    private var mockCards: [Card]?
-    private var mockCard: Card?
+    private var mockCardsResult: CardsResult?
+    private var mockCardResult: CardResult?
     private let isSuccess: Bool
 
-    init(_ cards: [Card], isSuccess: Bool = true) {
-        self.mockCards = cards
+    init(_ cardsResult: CardsResult, isSuccess: Bool = true) {
+        self.mockCardsResult = cardsResult
         self.isSuccess = isSuccess
     }
     
-    init(_ card: Card, isSuccess: Bool = true) {
-        self.mockCard = card
+    init(_ cardResult: CardResult, isSuccess: Bool = true) {
+        self.mockCardResult = cardResult
         self.isSuccess = isSuccess
     }
 
     override func fetchCard(id: String, completion: @escaping (Result<CardResult, Error>) -> Void) {
-        guard let mockCard, isSuccess else {
+        guard let mockCardResult, isSuccess else {
             completion(.failure(ErrorMock.error))
             return
         }
 
-        completion(.success(.init(card: mockCard)))
+        completion(.success(mockCardResult))
     }
     
     override func fetchCards(hp: Int, completion: @escaping (Result<CardsResult, Error>) -> Void) {
-        guard let mockCards, isSuccess else {
+        guard let mockCardsResult, isSuccess else {
             completion(.failure(ErrorMock.error))
             return
         }
 
-        completion(.success(.init(cards: mockCards)))
+        completion(.success(mockCardsResult))
     }
 }

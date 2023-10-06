@@ -1,0 +1,442 @@
+{
+  "cards": [
+    {
+      "id": "swsh3-117",
+      "name": "Eternatus VMAX",
+      "nationalPokedexNumber": 890,
+      "imageUrl": "https://images.pokemontcg.io/swsh3/117.png",
+      "imageUrlHiRes": "https://images.pokemontcg.io/swsh3/117_hires.png",
+      "types": [
+        "Darkness"
+      ],
+      "supertype": "Pokémon",
+      "subtype": "VMAX",
+      "evolvesFrom": "Eternatus V",
+      "ability": {
+        "name": "Eternal Zone",
+        "text": "If all of your Pokémon in play are Darkness type, you can have up to 8 Pokémon on your Bench, and you can't put non-Darkness Pokémon into play. (If this Ability stops working, discard Pokémon from your Bench until you have 5.)",
+        "type": "Ability"
+      },
+      "hp": "340",
+      "retreatCost": [
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "convertedRetreatCost": 3,
+      "number": "117",
+      "artist": "5ban Graphics",
+      "rarity": "Rare Holo VMAX",
+      "series": "Sword & Shield",
+      "set": "Darkness Ablaze",
+      "setCode": "swsh3",
+      "text": [
+        "When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "name": "Dread End",
+          "text": "This attack does 30 damage for each of your Darkness Pokémon in play.",
+          "damage": "30×",
+          "convertedEnergyCost": 2
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ]
+    },
+    {
+      "id": "swsh45sv-SV122",
+      "name": "Eternatus VMAX",
+      "nationalPokedexNumber": 890,
+      "imageUrl": "https://images.pokemontcg.io/swsh45sv/SV122.png",
+      "imageUrlHiRes": "https://images.pokemontcg.io/swsh45sv/SV122_hires.png",
+      "types": [
+        "Darkness"
+      ],
+      "supertype": "Pokémon",
+      "subtype": "VMAX",
+      "evolvesFrom": "Eternatus V",
+      "ability": {
+        "name": "Eternal Zone",
+        "text": "If all of your Pokémon in play are Darkness type, you can have up to 8 Pokémon on your Bench, and you can't put non-Darkness Pokémon into play. (If this Ability stops working, discard Pokémon from your Bench until you have 5.)",
+        "type": "Ability"
+      },
+      "hp": "340",
+      "retreatCost": [
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "convertedRetreatCost": 3,
+      "number": "SV122",
+      "artist": "5ban Graphics",
+      "rarity": "Rare Secret",
+      "series": "Sword & Shield",
+      "setCode": "swsh45sv",
+      "text": [
+        "VMAX rule: When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "name": "Dread End",
+          "text": "This attack does 30 damage for each of your Darkness Pokémon in play.",
+          "damage": "30×",
+          "convertedEnergyCost": 2
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ]
+    },
+    {
+      "id": "swsh1-206",
+      "name": "Snorlax VMAX",
+      "nationalPokedexNumber": 143,
+      "imageUrl": "https://images.pokemontcg.io/swsh1/206.png",
+      "imageUrlHiRes": "https://images.pokemontcg.io/swsh1/206_hires.png",
+      "types": [
+        "Colorless"
+      ],
+      "supertype": "Pokémon",
+      "subtype": "VMAX",
+      "evolvesFrom": "Snorlax V",
+      "hp": "340",
+      "retreatCost": [
+        "Colorless",
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "convertedRetreatCost": 4,
+      "number": "206",
+      "artist": "aky CG Works",
+      "rarity": "Rare Rainbow",
+      "series": "Sword & Shield",
+      "set": "Sword & Shield",
+      "setCode": "swsh1",
+      "text": [
+        "When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "G-Max Fall",
+          "text": "This attack does 30 more damage for each of your Benched Pokémon.",
+          "damage": "60+",
+          "convertedEnergyCost": 3
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ]
+    },
+    {
+      "id": "swsh2-137",
+      "name": "Copperajah VMAX",
+      "nationalPokedexNumber": 879,
+      "imageUrl": "https://images.pokemontcg.io/swsh2/137.png",
+      "imageUrlHiRes": "https://images.pokemontcg.io/swsh2/137_hires.png",
+      "types": [
+        "Metal"
+      ],
+      "supertype": "Pokémon",
+      "subtype": "VMAX",
+      "evolvesFrom": "Copperajah V",
+      "hp": "340",
+      "retreatCost": [
+        "Colorless",
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "convertedRetreatCost": 4,
+      "number": "137",
+      "artist": "5ban Graphics",
+      "rarity": "Rare Holo VMAX",
+      "series": "Sword & Shield",
+      "set": "Rebel Clash",
+      "setCode": "swsh2",
+      "text": [
+        "When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "name": "Dangerous Nose",
+          "text": "If your opponent's Active Pokémon is a Basic Pokémon, this attack does 100 more damage.",
+          "damage": "100+",
+          "convertedEnergyCost": 3
+        },
+        {
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "name": "G-Max Hammer",
+          "text": "",
+          "damage": "240",
+          "convertedEnergyCost": 4
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Grass",
+          "value": "-30"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fire",
+          "value": "×2"
+        }
+      ]
+    },
+    {
+      "id": "swsh2-199",
+      "name": "Copperajah VMAX",
+      "nationalPokedexNumber": 879,
+      "imageUrl": "https://images.pokemontcg.io/swsh2/199.png",
+      "imageUrlHiRes": "https://images.pokemontcg.io/swsh2/199_hires.png",
+      "types": [
+        "Metal"
+      ],
+      "supertype": "Pokémon",
+      "subtype": "VMAX",
+      "evolvesFrom": "Copperajah V",
+      "hp": "340",
+      "retreatCost": [
+        "Colorless",
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "convertedRetreatCost": 4,
+      "number": "199",
+      "artist": "5ban Graphics",
+      "rarity": "Rare Rainbow",
+      "series": "Sword & Shield",
+      "set": "Rebel Clash",
+      "setCode": "swsh2",
+      "text": [
+        "When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "name": "Dangerous Nose",
+          "text": "If your opponent's Active Pokémon is a Basic Pokémon, this attack does 100 more damage.",
+          "damage": "100+",
+          "convertedEnergyCost": 3
+        },
+        {
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "name": "G-Max Hammer",
+          "text": "",
+          "damage": "240",
+          "convertedEnergyCost": 4
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Grass",
+          "value": "-30"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fire",
+          "value": "×2"
+        }
+      ]
+    },
+    {
+      "id": "swsh3-192",
+      "name": "Eternatus VMAX",
+      "nationalPokedexNumber": 890,
+      "imageUrl": "https://images.pokemontcg.io/swsh3/192.png",
+      "imageUrlHiRes": "https://images.pokemontcg.io/swsh3/192_hires.png",
+      "types": [
+        "Darkness"
+      ],
+      "supertype": "Pokémon",
+      "subtype": "VMAX",
+      "evolvesFrom": "Eternatus V",
+      "ability": {
+        "name": "Eternal Zone",
+        "text": "If all of your Pokémon in play are Darkness type, you can have up to 8 Pokémon on your Bench, and you can't put non-Darkness Pokémon into play. (If this Ability stops working, discard Pokémon from your Bench until you have 5.)",
+        "type": "Ability"
+      },
+      "hp": "340",
+      "retreatCost": [
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "convertedRetreatCost": 3,
+      "number": "192",
+      "artist": "5ban Graphics",
+      "rarity": "Rare Rainbow",
+      "series": "Sword & Shield",
+      "set": "Darkness Ablaze",
+      "setCode": "swsh3",
+      "text": [
+        "When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "name": "Dread End",
+          "text": "This attack does 30 damage for each of your Darkness Pokémon in play.",
+          "damage": "30×",
+          "convertedEnergyCost": 2
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ]
+    },
+    {
+      "id": "swsh1-142",
+      "name": "Snorlax VMAX",
+      "nationalPokedexNumber": 143,
+      "imageUrl": "https://images.pokemontcg.io/swsh1/142.png",
+      "imageUrlHiRes": "https://images.pokemontcg.io/swsh1/142_hires.png",
+      "types": [
+        "Colorless"
+      ],
+      "supertype": "Pokémon",
+      "subtype": "VMAX",
+      "evolvesFrom": "Snorlax V",
+      "hp": "340",
+      "retreatCost": [
+        "Colorless",
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "convertedRetreatCost": 4,
+      "number": "142",
+      "artist": "aky CG Works",
+      "rarity": "Rare Holo VMAX",
+      "series": "Sword & Shield",
+      "set": "Sword & Shield",
+      "setCode": "swsh1",
+      "text": [
+        "When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "G-Max Fall",
+          "text": "This attack does 30 more damage for each of your Benched Pokémon.",
+          "damage": "60+",
+          "convertedEnergyCost": 3
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ]
+    },
+    {
+      "id": "swshp-SWSH045",
+      "name": "Eternatus VMAX",
+      "nationalPokedexNumber": 890,
+      "imageUrl": "https://images.pokemontcg.io/swshp/SWSH045.png",
+      "imageUrlHiRes": "https://images.pokemontcg.io/swshp/SWSH045_hires.png",
+      "types": [
+        "Darkness"
+      ],
+      "supertype": "Pokémon",
+      "subtype": "VMAX",
+      "evolvesFrom": "Eternatus V",
+      "ability": {
+        "name": "Eternal Zone",
+        "text": "If all of your Pokémon in play are Darkness type, you can have up to 8 Pokémon on your Bench, and you can't put non-Darkness Pokémon into play. (If this Ability stops working, discard Pokémon from your Bench until you have 5.)",
+        "type": "Ability"
+      },
+      "hp": "340",
+      "retreatCost": [
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "convertedRetreatCost": 3,
+      "number": "SWSH045",
+      "artist": "5ban Graphics",
+      "rarity": "Promo",
+      "series": "Sword & Shield",
+      "setCode": "swshp",
+      "text": [
+        "VMAX rule: When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "name": "Dread End",
+          "text": "This attack does 30 damage for each of your Darkness Pokémon in play.",
+          "damage": "30×",
+          "convertedEnergyCost": 2
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ]
+    }
+  ]
+}
