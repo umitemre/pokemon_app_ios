@@ -18,6 +18,10 @@ extension UIImageView {
     func loadImageFromUrl(_ url: URL?) {
         guard let url = url else { return }
         self.image = nil
-        self.af.setImage(withURL: url)
+        self.contentMode = .scaleAspectFit
+        self.af.setImage(
+            withURL: url,
+            placeholderImage: UIImage(systemName: "photo.on.rectangle")
+        )
     }
 }
