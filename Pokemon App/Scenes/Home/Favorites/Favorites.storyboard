@@ -30,6 +30,9 @@
                             <constraint firstItem="myv-NF-IwI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="utd-8z-vbe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardsView" destination="myv-NF-IwI" id="4np-SK-EKZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

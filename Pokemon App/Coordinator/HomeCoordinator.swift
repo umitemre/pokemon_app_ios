@@ -53,7 +53,11 @@ private extension HomeCoordinator {
     }
     
     final func getFavoritesController() -> FavoritesViewController? {
+        let viewModel = FavoritesViewModel()
         let controller = FavoritesViewController.instance()
+        controller?.coordinator = self
+        controller?.viewModel = viewModel
+
         return controller
     }
 }

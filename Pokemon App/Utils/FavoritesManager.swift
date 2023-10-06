@@ -43,6 +43,10 @@ class FavoritesManager {
 
         return results?.first != nil
     }
+
+    func triggerFavoritesUpdate() {
+        updateFavorites()
+    }
 }
 
 // MARK: Private
@@ -52,6 +56,7 @@ private extension FavoritesManager {
         favoriteItem.id = card.id
         favoriteItem.name = card.name
         favoriteItem.imageURL = card.imageURL
+        favoriteItem.hp = card.hp
 
         try? context.save()
         
