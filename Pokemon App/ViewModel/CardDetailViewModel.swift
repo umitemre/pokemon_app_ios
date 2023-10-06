@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 // MARK: CardDetailViewModelInput
-protocol CardDetailViewModelInput: BaseViewModel {
+protocol CardDetailViewModelInput: BaseViewModelProtocol {
     var cardResultDidChange: Observable<CardResult> { get }
     var cardResultError: Observable<Error> { get }
     var isFavorited: Observable<Bool> { get }
@@ -19,7 +19,7 @@ protocol CardDetailViewModelInput: BaseViewModel {
 }
 
 // MARK: CardDetailViewModel
-class CardDetailViewModel: CardDetailViewModelInput {
+class CardDetailViewModel: BaseViewModel, CardDetailViewModelInput {
     private var _cardResultDidChange: ReplaySubject<CardResult> = ReplaySubject.create(bufferSize: 1)
     var cardResultDidChange: RxSwift.Observable<CardResult> {
         get {
@@ -40,8 +40,6 @@ class CardDetailViewModel: CardDetailViewModelInput {
             return _isFavorited
         }
     }
-
-    var isLoading: RxSwift.ReplaySubject<Bool> = ReplaySubject.create(bufferSize: 1)
     
     private let repository: CardRepository
     

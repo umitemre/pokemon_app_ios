@@ -9,14 +9,14 @@ import Foundation
 import RxSwift
 
 // MARK: SearchViewModelInput
-protocol SearchViewModelInput: BaseViewModel {
+protocol SearchViewModelInput: BaseViewModelProtocol {
     var searchResultDidChange: Observable<CardsResult> { get }
     var searchResultError: Observable<Error> { get }
     func fetchSearchResults(hp: Int)
 }
 
 // MARK: SearchViewModel
-class SearchViewModel: SearchViewModelInput {
+class SearchViewModel: BaseViewModel, SearchViewModelInput {
     var _searchResultDidChange: ReplaySubject<CardsResult> = ReplaySubject.create(bufferSize: 1)
     var searchResultDidChange: RxSwift.Observable<CardsResult> {
         get {
@@ -30,8 +30,6 @@ class SearchViewModel: SearchViewModelInput {
             return _searchResultError
         }
     }
-
-    var isLoading: RxSwift.ReplaySubject<Bool> = ReplaySubject.create(bufferSize: 1)
     
     private let repository: CardRepository
     

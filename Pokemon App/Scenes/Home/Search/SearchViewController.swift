@@ -28,6 +28,7 @@ class SearchViewController: BaseViewController {
     // MARK: UI Components
     private let searchController: UISearchController = {
         let resultsViewController = SearchResultsViewController.instance()
+        resultsViewController?.viewModel = BaseViewModel()
         let searchController = UISearchController(searchResultsController: resultsViewController)
         searchController.searchBar.placeholder = "Type health here to search Pokémon"
         return searchController

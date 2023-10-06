@@ -17,8 +17,8 @@ class FavoritesViewController: BaseViewController {
     @IBOutlet private weak var emptyView: UIView!
 
     // MARK: MVVM-C Components
-    var viewModel: FavoritesViewModelInput? {
-        get { baseVM as? FavoritesViewModelInput }
+    var viewModel: BaseViewModelProtocol? {
+        get { baseVM }
         set { baseVM = newValue }
     }
     

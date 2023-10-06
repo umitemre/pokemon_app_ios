@@ -25,7 +25,7 @@
 		3053A2462ACD96B100EB4CC2 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053A2452ACD96B100EB4CC2 /* Search.storyboard */; };
 		3053A2482ACD983000EB4CC2 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053A2472ACD983000EB4CC2 /* Favorites.storyboard */; };
 		3053A24A2ACD983900EB4CC2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053A2492ACD983900EB4CC2 /* FavoritesViewController.swift */; };
-		30802DD72ACDE5B100686A35 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DD62ACDE5B100686A35 /* BaseViewModel.swift */; };
+		30802DD72ACDE5B100686A35 /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DD62ACDE5B100686A35 /* BaseViewModelProtocol.swift */; };
 		30802DDC2ACDE77D00686A35 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 30802DDB2ACDE77D00686A35 /* RxSwift */; };
 		30802DE02ACE0EC600686A35 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DDF2ACE0EC600686A35 /* CardsView.swift */; };
 		30802DE32ACE14BC00686A35 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802DE22ACE14BC00686A35 /* UIView+Extensions.swift */; };
@@ -87,7 +87,7 @@
 		3053A2452ACD96B100EB4CC2 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		3053A2472ACD983000EB4CC2 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		3053A2492ACD983900EB4CC2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		30802DD62ACDE5B100686A35 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		30802DD62ACDE5B100686A35 /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
 		30802DDF2ACE0EC600686A35 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		30802DE22ACE14BC00686A35 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		30802DE82ACE2C9700686A35 /* CardsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsView.xib; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 		30802DD52ACDE59F00686A35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				30802DD62ACDE5B100686A35 /* BaseViewModel.swift */,
+				30802DD62ACDE5B100686A35 /* BaseViewModelProtocol.swift */,
 				30802E022ACEDB6C00686A35 /* SearchViewModel.swift */,
 				30802E122AD02C4100686A35 /* CardDetailViewModel.swift */,
 				30802E142AD0383900686A35 /* FavoritesViewModel.swift */,
@@ -522,7 +522,7 @@
 				3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */,
 				30802E032ACEDB6C00686A35 /* SearchViewModel.swift in Sources */,
 				30802E112AD01E1400686A35 /* FavoritesManager.swift in Sources */,
-				30802DD72ACDE5B100686A35 /* BaseViewModel.swift in Sources */,
+				30802DD72ACDE5B100686A35 /* BaseViewModelProtocol.swift in Sources */,
 				30802DFC2ACECE9200686A35 /* CardRepository.swift in Sources */,
 				3053A23C2ACD7C9E00EB4CC2 /* HomeViewController.swift in Sources */,
 				30802DF62ACECAF900686A35 /* CardsResult.swift in Sources */,

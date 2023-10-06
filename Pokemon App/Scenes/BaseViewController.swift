@@ -22,7 +22,7 @@ class BaseViewController: UIViewController {
     private var activityIndicator: UIActivityIndicatorView!
 
     // MARK: MVVM-C Components
-    var baseVM: BaseViewModel? {
+    var baseVM: BaseViewModelProtocol? {
         didSet {
             baseVM?.isLoading.subscribe { [weak self] isLoading in
                 guard let self else { return }

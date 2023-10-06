@@ -7,14 +7,21 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 // MARK: SearchResultsViewController
 class SearchResultsViewController: BaseViewController {
+    private let disposeBag = DisposeBag()
+
     // MARK: Outlets
     @IBOutlet private weak var resultsCountLabel: UILabel!
     @IBOutlet private weak var cardsView: CardsView!
 
     // MARK: MVVM-C Components
+    var viewModel: BaseViewModelProtocol?  {
+        get { baseVM }
+        set { baseVM = newValue }
+    }
     var coordinator: HomeCoordinator?
 
     // MARK: Data
@@ -43,6 +50,14 @@ class SearchResultsViewController: BaseViewController {
         super.viewDidLoad()
         
         configureUI()
+        viewModel?.subscribeToFavorites()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel?.favoritesDidChange.subscribe { [weak self] _ in
+            guard let self else { return }
+            self.cardsView.reloadData()
+        }.disposed(by: disposeBag)
     }
 }
 
@@ -78,6 +93,8 @@ extension SearchResultsViewController: CardsViewDelegate {
     }
 
     func didLongPressItem(_ card: Card?) {
-        print("didLongPressItem")
+        guard let card else { return }
+
+        FavoritesManager.shared.toggleFavorite(card)
     }
 }

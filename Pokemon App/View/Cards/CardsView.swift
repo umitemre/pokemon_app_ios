@@ -29,7 +29,7 @@ class CardsView: UIView {
     // MARK: Data
     private var cardsResult: CardsResult? {
         didSet {
-            collectionView.reloadData()
+            reloadData()
         }
     }
 
@@ -83,6 +83,10 @@ private extension CardsView {
 extension CardsView {
     final func setCardsResult(_ cardsResults: CardsResult?) {
         self.cardsResult = cardsResults
+    }
+    
+    final func reloadData() {
+        collectionView.reloadData()
     }
 }
 
