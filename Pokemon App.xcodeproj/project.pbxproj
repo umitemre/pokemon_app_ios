@@ -50,6 +50,7 @@
 		30802E222AD05C5800686A35 /* mock_card_result.json in Resources */ = {isa = PBXBuildFile; fileRef = 30802E202AD05C3300686A35 /* mock_card_result.json */; };
 		30802E242AD05CBC00686A35 /* mock_cards_result.json in Sources */ = {isa = PBXBuildFile; fileRef = 30802E232AD05CBC00686A35 /* mock_cards_result.json */; };
 		30802E252AD05E5500686A35 /* mock_cards_result.json in Resources */ = {isa = PBXBuildFile; fileRef = 30802E232AD05CBC00686A35 /* mock_cards_result.json */; };
+		30802E272AD0614C00686A35 /* FavoritesManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E262AD0614C00686A35 /* FavoritesManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		30802E1E2AD0597200686A35 /* CardRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepositoryMock.swift; sourceTree = "<group>"; };
 		30802E202AD05C3300686A35 /* mock_card_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_card_result.json; sourceTree = "<group>"; };
 		30802E232AD05CBC00686A35 /* mock_cards_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_cards_result.json; sourceTree = "<group>"; };
+		30802E262AD0614C00686A35 /* FavoritesManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				30802E162AD0587900686A35 /* Repository */,
 				30802E1A2AD058DE00686A35 /* SearchViewControllerTest.swift */,
+				30802E262AD0614C00686A35 /* FavoritesManagerTest.swift */,
 			);
 			path = "Pokemon AppTests";
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30802E1B2AD058DF00686A35 /* SearchViewControllerTest.swift in Sources */,
+				30802E272AD0614C00686A35 /* FavoritesManagerTest.swift in Sources */,
 				30802E242AD05CBC00686A35 /* mock_cards_result.json in Sources */,
 				30802E192AD0588600686A35 /* MockDataManager.swift in Sources */,
 				30802E212AD05C3300686A35 /* mock_card_result.json in Sources */,
