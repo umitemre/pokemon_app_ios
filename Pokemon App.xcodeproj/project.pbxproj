@@ -51,6 +51,7 @@
 		30802E242AD05CBC00686A35 /* mock_cards_result.json in Sources */ = {isa = PBXBuildFile; fileRef = 30802E232AD05CBC00686A35 /* mock_cards_result.json */; };
 		30802E252AD05E5500686A35 /* mock_cards_result.json in Resources */ = {isa = PBXBuildFile; fileRef = 30802E232AD05CBC00686A35 /* mock_cards_result.json */; };
 		30802E272AD0614C00686A35 /* FavoritesManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E262AD0614C00686A35 /* FavoritesManagerTest.swift */; };
+		30B35A452AD0B88F002A2E7F /* RecentlyViewedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B35A442AD0B88F002A2E7F /* RecentlyViewedManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		30802E202AD05C3300686A35 /* mock_card_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_card_result.json; sourceTree = "<group>"; };
 		30802E232AD05CBC00686A35 /* mock_cards_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_cards_result.json; sourceTree = "<group>"; };
 		30802E262AD0614C00686A35 /* FavoritesManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManagerTest.swift; sourceTree = "<group>"; };
+		30B35A442AD0B88F002A2E7F /* RecentlyViewedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyViewedManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				30802E102AD01E1400686A35 /* FavoritesManager.swift */,
+				30B35A442AD0B88F002A2E7F /* RecentlyViewedManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30802DF02ACEC2D400686A35 /* UIImageView+Extensions.swift in Sources */,
+				30B35A452AD0B88F002A2E7F /* RecentlyViewedManager.swift in Sources */,
 				30802DE32ACE14BC00686A35 /* UIView+Extensions.swift in Sources */,
 				3053A2442ACD93D700EB4CC2 /* SearchViewController.swift in Sources */,
 				3053A2372ACD791C00EB4CC2 /* BaseCoordinator.swift in Sources */,
