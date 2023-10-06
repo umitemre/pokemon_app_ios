@@ -46,6 +46,10 @@
 		30802E192AD0588600686A35 /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E182AD0588600686A35 /* MockDataManager.swift */; };
 		30802E1B2AD058DF00686A35 /* SearchViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E1A2AD058DE00686A35 /* SearchViewControllerTest.swift */; };
 		30802E1F2AD0597200686A35 /* CardRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E1E2AD0597200686A35 /* CardRepositoryMock.swift */; };
+		30802E212AD05C3300686A35 /* mock_card_result.json in Sources */ = {isa = PBXBuildFile; fileRef = 30802E202AD05C3300686A35 /* mock_card_result.json */; };
+		30802E222AD05C5800686A35 /* mock_card_result.json in Resources */ = {isa = PBXBuildFile; fileRef = 30802E202AD05C3300686A35 /* mock_card_result.json */; };
+		30802E242AD05CBC00686A35 /* mock_cards_result.json in Sources */ = {isa = PBXBuildFile; fileRef = 30802E232AD05CBC00686A35 /* mock_cards_result.json */; };
+		30802E252AD05E5500686A35 /* mock_cards_result.json in Resources */ = {isa = PBXBuildFile; fileRef = 30802E232AD05CBC00686A35 /* mock_cards_result.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +111,8 @@
 		30802E182AD0588600686A35 /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
 		30802E1A2AD058DE00686A35 /* SearchViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTest.swift; sourceTree = "<group>"; };
 		30802E1E2AD0597200686A35 /* CardRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepositoryMock.swift; sourceTree = "<group>"; };
+		30802E202AD05C3300686A35 /* mock_card_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_card_result.json; sourceTree = "<group>"; };
+		30802E232AD05CBC00686A35 /* mock_cards_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_cards_result.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				30802E182AD0588600686A35 /* MockDataManager.swift */,
+				30802E202AD05C3300686A35 /* mock_card_result.json */,
+				30802E232AD05CBC00686A35 /* mock_cards_result.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -491,7 +499,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30802E252AD05E5500686A35 /* mock_cards_result.json in Resources */,
 				30802E082ACEF4C300686A35 /* CardDetailView.storyboard in Resources */,
+				30802E222AD05C5800686A35 /* mock_card_result.json in Resources */,
 				3053A2042ACD63E700EB4CC2 /* Assets.xcassets in Resources */,
 				3053A2482ACD983000EB4CC2 /* Favorites.storyboard in Resources */,
 				30802DEE2ACEB03000686A35 /* CardsViewCell.xib in Resources */,
@@ -556,7 +566,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				30802E1B2AD058DF00686A35 /* SearchViewControllerTest.swift in Sources */,
+				30802E242AD05CBC00686A35 /* mock_cards_result.json in Sources */,
 				30802E192AD0588600686A35 /* MockDataManager.swift in Sources */,
+				30802E212AD05C3300686A35 /* mock_card_result.json in Sources */,
 				30802E1F2AD0597200686A35 /* CardRepositoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
