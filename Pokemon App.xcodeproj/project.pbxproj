@@ -42,6 +42,8 @@
 		30802E032ACEDB6C00686A35 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E022ACEDB6C00686A35 /* SearchViewModel.swift */; };
 		30802E062ACEF4BA00686A35 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E052ACEF4BA00686A35 /* CardDetailViewController.swift */; };
 		30802E082ACEF4C300686A35 /* CardDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30802E072ACEF4C300686A35 /* CardDetailView.storyboard */; };
+		30802E0C2AD01C2900686A35 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30802E0A2AD01C2900686A35 /* DataModel.xcdatamodeld */; };
+		30802E112AD01E1400686A35 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E102AD01E1400686A35 /* FavoritesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		30802E022ACEDB6C00686A35 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		30802E052ACEF4BA00686A35 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		30802E072ACEF4C300686A35 /* CardDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardDetailView.storyboard; sourceTree = "<group>"; };
+		30802E0B2AD01C2900686A35 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		30802E102AD01E1400686A35 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 		3053A1F92ACD63E500EB4CC2 /* Pokemon App */ = {
 			isa = PBXGroup;
 			children = (
+				30802E092AD01AC600686A35 /* Data */,
 				3053A2352ACD791200EB4CC2 /* Coordinator */,
 				3053A22A2ACD645E00EB4CC2 /* Scenes */,
 				30802DF42ACECAE600686A35 /* Model */,
@@ -159,6 +164,7 @@
 				30802DD52ACDE59F00686A35 /* ViewModel */,
 				30802DDD2ACE0A6500686A35 /* View */,
 				30802DE12ACE14AF00686A35 /* Extensions */,
+				30802E0F2AD01E0700686A35 /* Utils */,
 				3053A1FA2ACD63E500EB4CC2 /* AppDelegate.swift */,
 				3053A1FC2ACD63E500EB4CC2 /* SceneDelegate.swift */,
 				3053A2032ACD63E700EB4CC2 /* Assets.xcassets */,
@@ -338,6 +344,22 @@
 			path = CardDetail;
 			sourceTree = "<group>";
 		};
+		30802E092AD01AC600686A35 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				30802E0A2AD01C2900686A35 /* DataModel.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		30802E0F2AD01E0700686A35 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				30802E102AD01E1400686A35 /* FavoritesManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -491,10 +513,12 @@
 				3053A2402ACD7D0D00EB4CC2 /* HomeCoordinator.swift in Sources */,
 				3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */,
 				30802E032ACEDB6C00686A35 /* SearchViewModel.swift in Sources */,
+				30802E112AD01E1400686A35 /* FavoritesManager.swift in Sources */,
 				30802DD72ACDE5B100686A35 /* BaseViewModel.swift in Sources */,
 				30802DFC2ACECE9200686A35 /* CardRepository.swift in Sources */,
 				3053A23C2ACD7C9E00EB4CC2 /* HomeViewController.swift in Sources */,
 				30802DF62ACECAF900686A35 /* CardsResult.swift in Sources */,
+				30802E0C2AD01C2900686A35 /* DataModel.xcdatamodeld in Sources */,
 				30802DEC2ACEAFCE00686A35 /* CardsViewCell.swift in Sources */,
 				30802DE02ACE0EC600686A35 /* CardsView.swift in Sources */,
 				30802E062ACEF4BA00686A35 /* CardDetailViewController.swift in Sources */,
@@ -875,6 +899,19 @@
 			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		30802E0A2AD01C2900686A35 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30802E0B2AD01C2900686A35 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 30802E0B2AD01C2900686A35 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3053A1EF2ACD63E500EB4CC2 /* Project object */;
 }

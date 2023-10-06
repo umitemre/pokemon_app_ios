@@ -12,6 +12,7 @@ struct CardsResult: Codable {
 }
 
 struct Card: Codable {
+    let id: String?
     let name: String?
     let artist: String?
     let imageURL: String?
@@ -19,6 +20,7 @@ struct Card: Codable {
     let hp: String?
 
     enum CodingKeys: String, CodingKey {
+        case id
         case name
         case artist
         case imageURL = "imageUrl"
