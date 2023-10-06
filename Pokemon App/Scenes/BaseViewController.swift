@@ -72,6 +72,34 @@ extension BaseViewController {
         loadingView.removeFromSuperview()
         activityIndicator.stopAnimating()
     }
+    
+    final func showRequestFailedAlert(canTryAgain: Bool, shouldShowOKButton: Bool = false, action: @escaping () -> Void) {
+        let alertController = UIAlertController(
+            title: "Request Failed",
+            message: "The request failed while processing, please try again later.",
+            preferredStyle: .alert
+        )
+
+        let buttonTitle = canTryAgain ? "Try Again" : "OK"
+        let mainAction = UIAlertAction(
+            title: buttonTitle,
+            style: .default
+        ) { _ in
+            action()
+        }
+
+        alertController.addAction(mainAction)
+        
+        if shouldShowOKButton {
+            let okAction = UIAlertAction(
+                title: "OK",
+                style: .cancel
+            )
+            alertController.addAction(okAction)
+        }
+
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
 
 // MARK: StoryboardInstantiable

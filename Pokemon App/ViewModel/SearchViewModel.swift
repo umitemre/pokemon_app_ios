@@ -12,7 +12,9 @@ import RxSwift
 protocol SearchViewModelInput: BaseViewModelProtocol {
     var searchResultDidChange: Observable<CardsResult> { get }
     var searchResultError: Observable<Error> { get }
+    
     func fetchSearchResults(hp: Int)
+    func retryLastSearch()
 }
 
 // MARK: SearchViewModel
@@ -31,6 +33,8 @@ class SearchViewModel: BaseViewModel, SearchViewModelInput {
         }
     }
     
+    var hp: Int?
+
     private let repository: CardRepository
     
     init(repository: CardRepository) {
@@ -41,6 +45,8 @@ class SearchViewModel: BaseViewModel, SearchViewModelInput {
 // MARK: Public
 extension SearchViewModel {
     final func fetchSearchResults(hp: Int) {
+        self.hp = hp
+
         isLoading.onNext(true)
         repository.fetchCards(hp: hp) { [weak self] result in
             guard let self else { return }
@@ -54,5 +60,11 @@ extension SearchViewModel {
                 self._searchResultError.onNext(error)
             }
         }
+    }
+    
+    final func retryLastSearch() {
+        guard let hp else { return }
+
+        fetchSearchResults(hp: hp)
     }
 }

@@ -80,6 +80,16 @@ class CardDetailViewController: BaseViewController {
 
             self.card = card
         }.disposed(by: disposeBag)
+        
+        viewModel?.cardResultError.subscribe { [weak self] _ in
+            guard let self else { return }
+            
+            self.showRequestFailedAlert(canTryAgain: false) { [weak self] in
+                guard let self else { return }
+
+                self.navigationController?.popViewController(animated: true)
+            }
+        }.disposed(by: disposeBag)
     }
 }
 

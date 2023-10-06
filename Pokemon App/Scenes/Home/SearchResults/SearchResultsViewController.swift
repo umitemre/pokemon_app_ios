@@ -18,8 +18,8 @@ class SearchResultsViewController: BaseViewController {
     @IBOutlet private weak var cardsView: CardsView!
 
     // MARK: MVVM-C Components
-    var viewModel: BaseViewModelProtocol?  {
-        get { baseVM }
+    var viewModel: SearchViewModelInput?  {
+        get { baseVM as? SearchViewModelInput }
         set { baseVM = newValue }
     }
     var coordinator: HomeCoordinator?
@@ -50,6 +50,7 @@ class SearchResultsViewController: BaseViewController {
         super.viewDidLoad()
         
         configureUI()
+        setObservers()
         viewModel?.subscribeToFavorites()
     }
     
@@ -57,6 +58,16 @@ class SearchResultsViewController: BaseViewController {
         viewModel?.favoritesDidChange.subscribe { [weak self] _ in
             guard let self else { return }
             self.cardsView.reloadData()
+        }.disposed(by: disposeBag)
+    }
+    
+    final func setObservers() {
+        viewModel?.searchResultError.subscribe { [weak self] _ in
+            guard let self else { return }
+            
+            self.showRequestFailedAlert(canTryAgain: true, shouldShowOKButton: true) {
+                self.viewModel?.retryLastSearch()
+            }
         }.disposed(by: disposeBag)
     }
 }
