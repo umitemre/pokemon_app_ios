@@ -49,7 +49,7 @@ class SearchViewController: BaseViewController {
         setObservers()
     }
     
-    final func setObservers() {
+    private func setObservers() {
         viewModel?.searchResultDidChange.subscribe { [weak self] data in
             guard let self else { return }
 

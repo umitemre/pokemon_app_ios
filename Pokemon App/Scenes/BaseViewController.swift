@@ -51,7 +51,7 @@ private extension BaseViewController {
 
     final func setupLoadingIndicator() {
         loadingView = UIView(frame: view.bounds)
-        loadingView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        loadingView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         
         activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.center = loadingView.center

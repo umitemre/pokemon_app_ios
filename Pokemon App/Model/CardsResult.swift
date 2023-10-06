@@ -11,6 +11,10 @@ struct CardsResult: Codable {
     let cards: [Card]?
 }
 
+struct CardResult: Codable {
+    let card: Card?
+}
+
 struct Card: Codable {
     let id: String?
     let name: String?

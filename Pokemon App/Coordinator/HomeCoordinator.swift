@@ -24,6 +24,9 @@ class HomeCoordinator: BaseCoordinator {
 extension HomeCoordinator{
     final func routeToCardDetail(_ card: Card) {
         guard let controller = CardDetailViewController.instance(withCard: card) else { return }
+        let repository = CardRepository()
+        let viewModel = CardDetailViewModel(repository: repository)
+        controller.viewModel = viewModel
         navigationController?.pushViewController(controller, animated: true)
     }
 }

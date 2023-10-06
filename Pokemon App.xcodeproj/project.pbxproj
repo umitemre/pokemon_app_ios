@@ -44,6 +44,7 @@
 		30802E082ACEF4C300686A35 /* CardDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30802E072ACEF4C300686A35 /* CardDetailView.storyboard */; };
 		30802E0C2AD01C2900686A35 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30802E0A2AD01C2900686A35 /* DataModel.xcdatamodeld */; };
 		30802E112AD01E1400686A35 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E102AD01E1400686A35 /* FavoritesManager.swift */; };
+		30802E132AD02C4100686A35 /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E122AD02C4100686A35 /* CardDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		30802E072ACEF4C300686A35 /* CardDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardDetailView.storyboard; sourceTree = "<group>"; };
 		30802E0B2AD01C2900686A35 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		30802E102AD01E1400686A35 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		30802E122AD02C4100686A35 /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			children = (
 				30802DD62ACDE5B100686A35 /* BaseViewModel.swift */,
 				30802E022ACEDB6C00686A35 /* SearchViewModel.swift */,
+				30802E122AD02C4100686A35 /* CardDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				3053A2442ACD93D700EB4CC2 /* SearchViewController.swift in Sources */,
 				3053A2372ACD791C00EB4CC2 /* BaseCoordinator.swift in Sources */,
 				3053A2402ACD7D0D00EB4CC2 /* HomeCoordinator.swift in Sources */,
+				30802E132AD02C4100686A35 /* CardDetailViewModel.swift in Sources */,
 				3053A22C2ACD646800EB4CC2 /* BaseViewController.swift in Sources */,
 				30802E032ACEDB6C00686A35 /* SearchViewModel.swift in Sources */,
 				30802E112AD01E1400686A35 /* FavoritesManager.swift in Sources */,
