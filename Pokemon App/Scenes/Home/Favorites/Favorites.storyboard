@@ -21,10 +21,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDe-F7-oLb">
-                                <rect key="frame" x="16" y="362" width="361" height="128"/>
+                                <rect key="frame" x="16" y="374.66666666666669" width="361" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWa-gl-5Tp">
-                                        <rect key="frame" x="8" y="23.333333333333314" width="345" height="81.333333333333329"/>
+                                        <rect key="frame" x="8" y="23.333333333333314" width="345" height="81.333333333333343"/>
                                         <string key="text">You have no favorites. You can add an item to the favorites, by tapping heart icon on the card detail page or simply long press on a card on search.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -35,6 +35,7 @@
                                 <constraints>
                                     <constraint firstItem="oWa-gl-5Tp" firstAttribute="centerX" secondItem="yDe-F7-oLb" secondAttribute="centerX" id="Gqo-hE-bJU"/>
                                     <constraint firstItem="oWa-gl-5Tp" firstAttribute="leading" secondItem="yDe-F7-oLb" secondAttribute="leading" constant="8" id="aPc-aI-YNY"/>
+                                    <constraint firstAttribute="height" constant="128" id="reR-HN-bgH"/>
                                     <constraint firstAttribute="trailing" secondItem="oWa-gl-5Tp" secondAttribute="trailing" constant="8" id="shC-lg-f9B"/>
                                     <constraint firstItem="oWa-gl-5Tp" firstAttribute="centerY" secondItem="yDe-F7-oLb" secondAttribute="centerY" id="yLf-Pn-ggw"/>
                                 </constraints>
@@ -43,12 +44,11 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yDe-F7-oLb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="303" id="7YF-vb-MtH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yDe-F7-oLb" secondAttribute="trailing" constant="16" id="9Ii-Lv-q3r"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="myv-NF-IwI" secondAttribute="bottom" constant="8" id="OgQ-mB-krz"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yDe-F7-oLb" secondAttribute="bottom" constant="328" id="WjP-y0-KD0"/>
                             <constraint firstItem="myv-NF-IwI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="Z0l-cy-bep"/>
                             <constraint firstItem="yDe-F7-oLb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="e0x-07-chJ"/>
+                            <constraint firstItem="yDe-F7-oLb" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="eVc-ho-Git"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="myv-NF-IwI" secondAttribute="trailing" constant="8" id="uYf-13-8mE"/>
                             <constraint firstItem="myv-NF-IwI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="utd-8z-vbe"/>
                         </constraints>
