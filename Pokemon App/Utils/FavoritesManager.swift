@@ -72,6 +72,8 @@ private extension FavoritesManager {
 
         context.delete(item)
         
+        try? context.save()
+
         updateFavorites()
     }
     
