@@ -43,6 +43,9 @@
 		30802E112AD01E1400686A35 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E102AD01E1400686A35 /* FavoritesManager.swift */; };
 		30802E132AD02C4100686A35 /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E122AD02C4100686A35 /* CardDetailViewModel.swift */; };
 		30802E152AD0383900686A35 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E142AD0383900686A35 /* FavoritesViewModel.swift */; };
+		30802E192AD0588600686A35 /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E182AD0588600686A35 /* MockDataManager.swift */; };
+		30802E1B2AD058DF00686A35 /* SearchViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E1A2AD058DE00686A35 /* SearchViewControllerTest.swift */; };
+		30802E1F2AD0597200686A35 /* CardRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E1E2AD0597200686A35 /* CardRepositoryMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,10 @@
 		30802E102AD01E1400686A35 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		30802E122AD02C4100686A35 /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
 		30802E142AD0383900686A35 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		30802E172AD0588500686A35 /* Pokemon AppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pokemon AppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		30802E182AD0588600686A35 /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
+		30802E1A2AD058DE00686A35 /* SearchViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTest.swift; sourceTree = "<group>"; };
+		30802E1E2AD0597200686A35 /* CardRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepositoryMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +180,8 @@
 		3053A2102ACD63E700EB4CC2 /* Pokemon AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				30802E162AD0587900686A35 /* Repository */,
+				30802E1A2AD058DE00686A35 /* SearchViewControllerTest.swift */,
 			);
 			path = "Pokemon AppTests";
 			sourceTree = "<group>";
@@ -349,6 +358,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		30802E162AD0587900686A35 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				30802E1C2AD0592700686A35 /* Data */,
+				30802E172AD0588500686A35 /* Pokemon AppTests-Bridging-Header.h */,
+				30802E1E2AD0597200686A35 /* CardRepositoryMock.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		30802E1C2AD0592700686A35 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				30802E182AD0588600686A35 /* MockDataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -425,6 +452,7 @@
 					};
 					3053A20C2ACD63E700EB4CC2 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 						TestTargetID = 3053A1F62ACD63E500EB4CC2;
 					};
 					3053A2162ACD63E700EB4CC2 = {
@@ -527,6 +555,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30802E1B2AD058DF00686A35 /* SearchViewControllerTest.swift in Sources */,
+				30802E192AD0588600686A35 /* MockDataManager.swift in Sources */,
+				30802E1F2AD0597200686A35 /* CardRepositoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +762,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3K8WJZJ3WC;
@@ -740,6 +772,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.umitemreaydin.Pokemon-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Pokemon AppTests/Repository/Pokemon AppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pokemon App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pokemon App";
@@ -751,6 +785,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3K8WJZJ3WC;
@@ -760,6 +795,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.umitemreaydin.Pokemon-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Pokemon AppTests/Repository/Pokemon AppTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pokemon App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pokemon App";
