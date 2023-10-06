@@ -14,6 +14,7 @@ class FavoritesViewController: BaseViewController {
     
     // MARK: Outlets
     @IBOutlet private weak var cardsView: CardsView!
+    @IBOutlet private weak var emptyView: UIView!
 
     // MARK: MVVM-C Components
     var viewModel: FavoritesViewModelInput? {
@@ -47,6 +48,10 @@ class FavoritesViewController: BaseViewController {
         viewModel?.favoritesDidChange.subscribe { [weak self] favorites in
             guard let self else { return }
             
+            let count = favorites.element?.count ?? 0
+            cardsView.isHidden = count == 0
+            emptyView.isHidden = count > 0
+            
             let cardsResult = CardsResult(cards: favorites.element)
             self.cardsView.setCardsResult(cardsResult)
         }.disposed(by: disposeBag)
@@ -60,10 +65,16 @@ private extension FavoritesViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         configureCardsView()
+        configureEmptyView()
     }
     
     final func configureCardsView() {
+        cardsView.isHidden = true
         cardsView.delegate = self
+    }
+    
+    final func configureEmptyView() {
+        emptyView.isHidden = true
     }
 }
 
