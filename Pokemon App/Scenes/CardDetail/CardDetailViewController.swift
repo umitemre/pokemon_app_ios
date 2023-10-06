@@ -34,6 +34,8 @@ class CardDetailViewController: BaseViewController {
         didSet {
             guard let card else { return }
 
+            RecentlyViewedManager.shared.addToRecentlyViewed(card)
+
             self.imageView.loadImageFromUrl(card.imageURLHiRes)
             
             self.titleLabel.text = card.name ?? ""
