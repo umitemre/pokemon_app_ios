@@ -12,7 +12,10 @@ import RxSwift
 protocol CardDetailViewModelInput: BaseViewModel {
     var cardResultDidChange: Observable<CardResult> { get }
     var cardResultError: Observable<Error> { get }
+    var isFavorited: Observable<Bool> { get }
+
     func fetchCard(_ id: String)
+    func fetchFavoriteStatus(_ id: String)
 }
 
 // MARK: CardDetailViewModel
@@ -30,6 +33,13 @@ class CardDetailViewModel: CardDetailViewModelInput {
             return _cardResultError
         }
     }
+    
+    private var _isFavorited: ReplaySubject<Bool> = ReplaySubject.create(bufferSize: 1)
+    var isFavorited: Observable<Bool> {
+        get {
+            return _isFavorited
+        }
+    }
 
     var isLoading: RxSwift.ReplaySubject<Bool> = ReplaySubject.create(bufferSize: 1)
     
@@ -42,6 +52,18 @@ class CardDetailViewModel: CardDetailViewModelInput {
 
 // MARK: Public
 extension CardDetailViewModel {
+    final func fetchFavoriteStatus(_ id: String) {
+        DispatchQueue.global().async { [weak self] in
+            guard let self else { return }
+            
+            let isFavorited = FavoritesManager.shared.doesFavoriteExist(id)
+
+            DispatchQueue.main.async {
+                self._isFavorited.onNext(isFavorited)
+            }
+        }
+    }
+    
     final func fetchCard(_ id: String) {
         isLoading.onNext(true)
         repository.fetchCard(id: id) { [weak self] result in
