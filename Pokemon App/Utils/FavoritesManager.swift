@@ -35,7 +35,9 @@ class FavoritesManager {
         }
     }
 
-    func doesFavoriteExist(_ id: String) -> Bool {
+    func doesFavoriteExist(_ id: String?) -> Bool {
+        guard let id else { return false }
+
         let fetchRequest: NSFetchRequest<FavoriteCard> = FavoriteCard.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %@", id)
 

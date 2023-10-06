@@ -9,6 +9,7 @@ import UIKit
 
 class CardsViewCell: UICollectionViewCell {
     // MARK: Outlets
+    @IBOutlet private weak var favoriteImageView: UIImageView!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var hpLabel: UILabel!
@@ -23,12 +24,33 @@ class CardsViewCell: UICollectionViewCell {
             hpLabel.text = "HP: \(card?.hp ?? "")"
         }
     }
+    private var isFavorited = false {
+        didSet {
+            favoriteImageView.isHidden = !isFavorited
+        }
+    }
     
     weak var delegate: CardsViewDelegate?
 
     override func awakeFromNib() {
+        configureUI()
+    }
+}
+
+// MARK: Configuration
+private extension CardsViewCell {
+    final func configureUI() {
+        configureLongPress()
+        configureFavoriteImage()
+    }
+    
+    final func configureLongPress() {
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         self.addGestureRecognizer(longPressRecognizer)
+    }
+    
+    final func configureFavoriteImage() {
+        favoriteImageView.isHidden = true
     }
 }
 
@@ -43,7 +65,8 @@ extension CardsViewCell {
 
 // MARK: Public
 extension CardsViewCell {
-    final func setData(_ card: Card?) {
+    final func setData(_ card: Card?, isFavorited: Bool) {
         self.card = card
+        self.isFavorited = isFavorited
     }
 }

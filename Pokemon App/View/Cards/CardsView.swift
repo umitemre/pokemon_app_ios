@@ -111,8 +111,9 @@ extension CardsView: UICollectionViewDataSource {
         }
         
         let data = cardsResult?.cards?[indexPath.row]
+        let isFavorited = FavoritesManager.shared.doesFavoriteExist(data?.id)
         cell.delegate = delegate
-        cell.setData(data)
+        cell.setData(data, isFavorited: isFavorited)
 
         return cell
     }

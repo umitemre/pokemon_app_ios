@@ -87,6 +87,8 @@ extension FavoritesViewController: CardsViewDelegate {
     }
     
     func didLongPressItem(_ card: Card?) {
-        
+        guard let card else { return }
+
+        FavoritesManager.shared.toggleFavorite(card)
     }
 }
