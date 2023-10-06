@@ -26,9 +26,9 @@ class SearchViewController: BaseViewController {
     }
 
     // MARK: UI Components
-    private let searchController: UISearchController = {
+    private lazy var searchController: UISearchController = {
         let resultsViewController = SearchResultsViewController.instance()
-        resultsViewController?.viewModel = BaseViewModel()
+        resultsViewController?.viewModel = viewModel
         let searchController = UISearchController(searchResultsController: resultsViewController)
         searchController.searchBar.placeholder = "Type health here to search Pokémon"
         return searchController
@@ -118,7 +118,7 @@ extension SearchViewController: UISearchBarDelegate {
 
         searchTimer?.invalidate()
         
-        searchTimer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { [weak self] _ in
+        searchTimer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: false) { [weak self] _ in
             guard let self else { return }
 
             self.performSearch(searchText)
