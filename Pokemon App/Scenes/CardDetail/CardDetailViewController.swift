@@ -14,6 +14,7 @@ class CardDetailViewController: BaseViewController {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var hpLabel: UILabel!
+    @IBOutlet private weak var artistNameLabel: UILabel!
     
     // MARK: Data
     private var card: Card?
@@ -39,7 +40,7 @@ class CardDetailViewController: BaseViewController {
 // MARK: Configuration
 private extension CardDetailViewController{
     final func configureUI() {
-        title = "Details"        
+        title = "Details"
         bindData()
     }
     
@@ -48,5 +49,6 @@ private extension CardDetailViewController{
         
         self.titleLabel.text = card?.name ?? ""
         self.hpLabel.text = "HP: \(card?.hp ?? "")"
+        self.artistNameLabel.text = "Artist: \(card?.artist ?? "")"
     }
 }

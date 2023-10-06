@@ -13,12 +13,14 @@ struct CardsResult: Codable {
 
 struct Card: Codable {
     let name: String?
+    let artist: String?
     let imageURL: String?
     let imageURLHiRes: String?
     let hp: String?
 
     enum CodingKeys: String, CodingKey {
         case name
+        case artist
         case imageURL = "imageUrl"
         case imageURLHiRes = "imageUrlHiRes"
         case hp
