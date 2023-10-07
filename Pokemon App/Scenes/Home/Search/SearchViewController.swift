@@ -34,6 +34,9 @@ class SearchViewController: BaseViewController {
         resultsViewController?.viewModel = viewModel
         let searchController = UISearchController(searchResultsController: resultsViewController)
         searchController.searchBar.placeholder = "Type health here to search Pokémon"
+        if let searchTextField = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            searchTextField.keyboardType = .numberPad
+        }
         return searchController
     }()
 
