@@ -20,6 +20,23 @@ class CardsView: UIView {
     // MARK: Outlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    // MARK: UI Components
+    private var flowLayout: UICollectionViewFlowLayout {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = orientation
+        flowLayout.minimumLineSpacing = 8
+        flowLayout.minimumInteritemSpacing = 8
+        
+        return flowLayout
+    }
+    
+    private var orientation: UICollectionView.ScrollDirection = .vertical {
+        didSet {
+            flowLayout.scrollDirection = orientation
+            collectionView.collectionViewLayout = flowLayout
+        }
+    }
+
     // MARK: Contants
     private let cellWidth: CGFloat = 120
     private let cellHeight: CGFloat = 232
@@ -65,11 +82,6 @@ private extension CardsView {
     }
 
     final func configureCollectionView() {
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .vertical
-        flowLayout.minimumLineSpacing = 8
-        flowLayout.minimumInteritemSpacing = 8
-
         collectionView.collectionViewLayout = flowLayout
         
         collectionView.register(UINib(nibName: Cell.identifier, bundle: nil), forCellWithReuseIdentifier: Cell.identifier)
@@ -81,10 +93,18 @@ private extension CardsView {
 
 // MARK: Public
 extension CardsView {
+    final func configure(withOrientation orientation: UICollectionView.ScrollDirection) {
+        self.orientation = orientation
+    }
+
     final func setCardsResult(_ cardsResults: CardsResult?) {
         self.cardsResult = cardsResults
     }
     
+    final func resetScroll() {
+        collectionView.setContentOffset(.zero, animated: true)
+    }
+
     final func reloadData() {
         collectionView.reloadData()
     }

@@ -12,30 +12,39 @@ import RxSwift
 protocol SearchViewModelInput: BaseViewModelProtocol {
     var searchResultDidChange: Observable<CardsResult> { get }
     var searchResultError: Observable<Error> { get }
-    
+    var recentlyViewedDidChanged: Observable<[Card]> { get }
+
+    func subscribeToRecentlyViewed()
     func fetchSearchResults(hp: Int)
     func retryLastSearch()
 }
 
 // MARK: SearchViewModel
 class SearchViewModel: BaseViewModel, SearchViewModelInput {
-    var _searchResultDidChange: ReplaySubject<CardsResult> = ReplaySubject.create(bufferSize: 1)
+    private var _searchResultDidChange: ReplaySubject<CardsResult> = ReplaySubject.create(bufferSize: 1)
     var searchResultDidChange: RxSwift.Observable<CardsResult> {
         get {
             return _searchResultDidChange
         }
     }
 
-    var _searchResultError: ReplaySubject<Error> = ReplaySubject.create(bufferSize: 1)
+    private var _searchResultError: ReplaySubject<Error> = ReplaySubject.create(bufferSize: 1)
     var searchResultError: RxSwift.Observable<Error> {
         get {
             return _searchResultError
         }
     }
     
-    var hp: Int?
+    private var _recentlyViewedDidChanged: ReplaySubject<[Card]> = ReplaySubject.create(bufferSize: 1)
+    var recentlyViewedDidChanged: Observable<[Card]> {
+        get {
+            return _recentlyViewedDidChanged
+        }
+    }
 
+    private var lastHPQuery: Int?
     private let repository: CardRepository
+    private let recentlyViewedManager = RecentlyViewedManager.shared
     
     init(repository: CardRepository) {
         self.repository = repository
@@ -44,8 +53,18 @@ class SearchViewModel: BaseViewModel, SearchViewModelInput {
 
 // MARK: Public
 extension SearchViewModel {
+    final func subscribeToRecentlyViewed() {
+        recentlyViewedManager.triggerRecentlyViewedUpdate()
+        recentlyViewedManager.recentlyViewed.subscribe { [weak self] data in
+            guard let self,
+                  let results = data.element else { return }
+            
+            self._recentlyViewedDidChanged.onNext(results.toCards.reversed())
+        }.disposed(by: disposeBag)
+    }
+
     final func fetchSearchResults(hp: Int) {
-        self.hp = hp
+        self.lastHPQuery = hp
 
         isLoading.onNext(true)
         repository.fetchCards(hp: hp) { [weak self] result in
@@ -63,8 +82,8 @@ extension SearchViewModel {
     }
     
     final func retryLastSearch() {
-        guard let hp else { return }
+        guard let lastHPQuery else { return }
 
-        fetchSearchResults(hp: hp)
+        fetchSearchResults(hp: lastHPQuery)
     }
 }

@@ -16,6 +16,8 @@ class SearchResultsViewController: BaseViewController {
     // MARK: Outlets
     @IBOutlet private weak var resultsCountLabel: UILabel!
     @IBOutlet private weak var cardsView: CardsView!
+    
+    weak var delegate: CardsViewDelegate?
 
     // MARK: MVVM-C Components
     var viewModel: SearchViewModelInput?  {
@@ -79,7 +81,7 @@ private extension SearchResultsViewController {
     }
     
     final func configureCardsView() {
-        cardsView.delegate = self
+        cardsView.delegate = delegate
     }
 }
 
@@ -92,20 +94,5 @@ extension SearchResultsViewController {
     final func resetUI() {
         self.cardsResult = nil
         self.resultsCountLabel.isHidden = true
-    }
-}
-
-// MARK: CardsViewDelegate
-extension SearchResultsViewController: CardsViewDelegate {
-    func didTapItem(_ card: Card?) {
-        guard let card else { return }
-
-        coordinator?.routeToCardDetail(card)
-    }
-
-    func didLongPressItem(_ card: Card?) {
-        guard let card else { return }
-
-        FavoritesManager.shared.toggleFavorite(card)
     }
 }

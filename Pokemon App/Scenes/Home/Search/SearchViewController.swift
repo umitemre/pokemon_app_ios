@@ -13,6 +13,9 @@ class SearchViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     private var searchTimer: Timer?
     
+    // MARK: Outlets
+    @IBOutlet private weak var recentlyViewed: RecentlyViewedView!
+    
     // MARK: MVVM-C Components
     var viewModel: SearchViewModelInput? {
         get { baseVM as? SearchViewModelInput }
@@ -50,7 +53,25 @@ class SearchViewController: BaseViewController {
         setObservers()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel?.subscribeToFavorites()
+        viewModel?.subscribeToRecentlyViewed()
+    }
+
     private func setObservers() {
+        viewModel?.favoritesDidChange.subscribe { [weak self] _ in
+            guard let self else { return }
+            
+            self.recentlyViewed.reloadData()
+        }.disposed(by: disposeBag)
+        
+        viewModel?.recentlyViewedDidChanged.subscribe { [weak self] data in
+            guard let self,
+                  let results = data.element else { return }
+        
+            self.recentlyViewed.updateData(results)
+        }.disposed(by: disposeBag)
+
         viewModel?.searchResultDidChange.subscribe { [weak self] data in
             guard let self else { return }
 
@@ -67,6 +88,8 @@ private extension SearchViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
 
         configureSearchBar()
+        configureSearchResultsViewController()
+        configureRecentlyViewedView()
     }
 
     final func configureSearchBar() {
@@ -74,6 +97,14 @@ private extension SearchViewController {
         searchController.searchResultsUpdater = self
 
         navigationItem.searchController = searchController
+    }
+    
+    final func configureSearchResultsViewController() {
+        getResultsViewController().delegate = self
+    }
+    
+    final func configureRecentlyViewedView() {
+        recentlyViewed.delegate = self
     }
 }
 
@@ -123,5 +154,20 @@ extension SearchViewController: UISearchBarDelegate {
 
             self.performSearch(searchText)
         }
+    }
+}
+
+// MARK: CardsViewDelegate
+extension SearchViewController: CardsViewDelegate {
+    func didTapItem(_ card: Card?) {
+        guard let card else { return }
+
+        coordinator?.routeToCardDetail(card)
+    }
+
+    func didLongPressItem(_ card: Card?) {
+        guard let card else { return }
+
+        FavoritesManager.shared.toggleFavorite(card)
     }
 }

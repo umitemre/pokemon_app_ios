@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecentlyViewedView" customModule="Pokemon_App" customModuleProvider="target">
+            <connections>
+                <outlet property="cardsView" destination="EHk-bD-yqX" id="Cog-cL-65N"/>
+                <outlet property="emptyView" destination="jXs-PH-YCz" id="aSB-WU-nED"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="304"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="bcC-6B-2LC">
+                    <rect key="frame" x="16" y="16" width="361" height="267.66666666666669"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently Viewed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coe-Do-mQC">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="28.666666666666668"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWs-jX-L4n">
+                            <rect key="frame" x="0.0" y="35.666666666666657" width="361" height="231.99999999999997"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHk-bD-yqX" customClass="CardsView" customModule="Pokemon_App" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="232"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXs-PH-YCz">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="232"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't viewed any card yet. Your recently viewed cards will be shown here." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8k-9s-qvy">
+                                            <rect key="frame" x="0.0" y="8" width="361" height="40.666666666666664"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="g8k-9s-qvy" firstAttribute="leading" secondItem="jXs-PH-YCz" secondAttribute="leading" id="BV3-Bb-GGy"/>
+                                        <constraint firstAttribute="trailing" secondItem="g8k-9s-qvy" secondAttribute="trailing" id="aPu-qV-eXG"/>
+                                        <constraint firstItem="g8k-9s-qvy" firstAttribute="top" secondItem="jXs-PH-YCz" secondAttribute="top" constant="8" id="rhF-xc-y15"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="EHk-bD-yqX" firstAttribute="top" secondItem="aWs-jX-L4n" secondAttribute="top" id="6yf-Od-s8M"/>
+                                <constraint firstAttribute="trailing" secondItem="EHk-bD-yqX" secondAttribute="trailing" id="A0i-mg-L6E"/>
+                                <constraint firstAttribute="height" constant="232" id="Au1-BN-Yfd"/>
+                                <constraint firstAttribute="bottom" secondItem="EHk-bD-yqX" secondAttribute="bottom" id="NDU-ax-6hb"/>
+                                <constraint firstItem="jXs-PH-YCz" firstAttribute="leading" secondItem="aWs-jX-L4n" secondAttribute="leading" id="PE0-xV-HdQ"/>
+                                <constraint firstItem="jXs-PH-YCz" firstAttribute="top" secondItem="aWs-jX-L4n" secondAttribute="top" id="XmR-Qa-l4R"/>
+                                <constraint firstItem="EHk-bD-yqX" firstAttribute="leading" secondItem="aWs-jX-L4n" secondAttribute="leading" id="cMy-t9-lPE"/>
+                                <constraint firstAttribute="bottom" secondItem="jXs-PH-YCz" secondAttribute="bottom" id="zqb-je-gsZ"/>
+                                <constraint firstAttribute="trailing" secondItem="jXs-PH-YCz" secondAttribute="trailing" id="zta-sV-6ZG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="bcC-6B-2LC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="32N-sO-B6V"/>
+                <constraint firstItem="bcC-6B-2LC" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-16" id="8Mi-92-DZd"/>
+                <constraint firstItem="bcC-6B-2LC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="qJ7-ng-BjN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-67.938931297709928" y="-173.2394366197183"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

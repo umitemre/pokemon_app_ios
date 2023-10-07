@@ -15,9 +15,26 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTM-Z4-cKn" customClass="RecentlyViewedView" customModule="Pokemon_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="75" width="393" height="268"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="hO0-HN-ft3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tTM-Z4-cKn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="4xu-qz-EXX"/>
+                            <constraint firstItem="tTM-Z4-cKn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CjT-we-qZa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tTM-Z4-cKn" secondAttribute="trailing" id="FU8-Pr-vf4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recentlyViewed" destination="tTM-Z4-cKn" id="0wz-RY-Q4A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

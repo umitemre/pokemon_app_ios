@@ -45,14 +45,14 @@ class FavoritesViewController: BaseViewController {
     }
     
     private func setObservers() {
-        viewModel?.favoritesDidChange.subscribe { [weak self] favorites in
+        viewModel?.favoritesDidChange.subscribe { [weak self] data in
             guard let self else { return }
             
-            let count = favorites.element?.count ?? 0
+            let count = data.element?.count ?? 0
             cardsView.isHidden = count == 0
             emptyView.isHidden = count > 0
             
-            let cardsResult = CardsResult(cards: favorites.element)
+            let cardsResult = CardsResult(cards: data.element)
             self.cardsView.setCardsResult(cardsResult)
         }.disposed(by: disposeBag)
     }

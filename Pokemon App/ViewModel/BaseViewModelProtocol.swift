@@ -19,7 +19,7 @@ protocol BaseViewModelProtocol: AnyObject {
 
 // MARK: BaseViewModel
 class BaseViewModel: BaseViewModelProtocol {
-    private let disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
 
     var _favoritesDidChange: RxSwift.ReplaySubject<[Card]> = ReplaySubject.create(bufferSize: 1)
     var favoritesDidChange: RxSwift.Observable<[Card]> {
@@ -38,9 +38,9 @@ extension BaseViewModel {
         // Manually trigger favorites update
         favoritesManager.triggerFavoritesUpdate()
 
-        favoritesManager.favorites.subscribe { [weak self] favorites in
+        favoritesManager.favorites.subscribe { [weak self] data in
             guard let self else { return }
-            self.dispatchFavorites(favorites)
+            self.dispatchFavorites(data)
         }.disposed(by: disposeBag)
     }
 }

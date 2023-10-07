@@ -51,7 +51,10 @@
 		30802E242AD05CBC00686A35 /* mock_cards_result.json in Sources */ = {isa = PBXBuildFile; fileRef = 30802E232AD05CBC00686A35 /* mock_cards_result.json */; };
 		30802E252AD05E5500686A35 /* mock_cards_result.json in Resources */ = {isa = PBXBuildFile; fileRef = 30802E232AD05CBC00686A35 /* mock_cards_result.json */; };
 		30802E272AD0614C00686A35 /* FavoritesManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30802E262AD0614C00686A35 /* FavoritesManagerTest.swift */; };
+		30B35A412AD0B2F7002A2E7F /* RecentlyViewedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B35A402AD0B2F7002A2E7F /* RecentlyViewedView.swift */; };
+		30B35A432AD0B344002A2E7F /* RecentlyViewedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B35A422AD0B344002A2E7F /* RecentlyViewedView.xib */; };
 		30B35A452AD0B88F002A2E7F /* RecentlyViewedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B35A442AD0B88F002A2E7F /* RecentlyViewedManager.swift */; };
+		30B35A472AD0CBC6002A2E7F /* RecentlyViewedCard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B35A462AD0CBC6002A2E7F /* RecentlyViewedCard+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +111,10 @@
 		30802E202AD05C3300686A35 /* mock_card_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_card_result.json; sourceTree = "<group>"; };
 		30802E232AD05CBC00686A35 /* mock_cards_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_cards_result.json; sourceTree = "<group>"; };
 		30802E262AD0614C00686A35 /* FavoritesManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManagerTest.swift; sourceTree = "<group>"; };
+		30B35A402AD0B2F7002A2E7F /* RecentlyViewedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyViewedView.swift; sourceTree = "<group>"; };
+		30B35A422AD0B344002A2E7F /* RecentlyViewedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentlyViewedView.xib; sourceTree = "<group>"; };
 		30B35A442AD0B88F002A2E7F /* RecentlyViewedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyViewedManager.swift; sourceTree = "<group>"; };
+		30B35A462AD0CBC6002A2E7F /* RecentlyViewedCard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentlyViewedCard+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +267,7 @@
 		30802DDD2ACE0A6500686A35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30B35A3F2AD0B2E5002A2E7F /* RecentlyViewed */,
 				30802DDE2ACE0EB900686A35 /* Cards */,
 			);
 			path = View;
@@ -281,6 +288,7 @@
 			children = (
 				30802DE22ACE14BC00686A35 /* UIView+Extensions.swift */,
 				30802DEF2ACEC2D400686A35 /* UIImageView+Extensions.swift */,
+				30B35A462AD0CBC6002A2E7F /* RecentlyViewedCard+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -372,6 +380,15 @@
 				30802E232AD05CBC00686A35 /* mock_cards_result.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		30B35A3F2AD0B2E5002A2E7F /* RecentlyViewed */ = {
+			isa = PBXGroup;
+			children = (
+				30B35A402AD0B2F7002A2E7F /* RecentlyViewedView.swift */,
+				30B35A422AD0B344002A2E7F /* RecentlyViewedView.xib */,
+			);
+			path = RecentlyViewed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30802E252AD05E5500686A35 /* mock_cards_result.json in Resources */,
+				30B35A432AD0B344002A2E7F /* RecentlyViewedView.xib in Resources */,
 				30802E082ACEF4C300686A35 /* CardDetailView.storyboard in Resources */,
 				30802E222AD05C5800686A35 /* mock_card_result.json in Resources */,
 				3053A2042ACD63E700EB4CC2 /* Assets.xcassets in Resources */,
@@ -506,6 +524,7 @@
 				30802E112AD01E1400686A35 /* FavoritesManager.swift in Sources */,
 				30802DD72ACDE5B100686A35 /* BaseViewModelProtocol.swift in Sources */,
 				30802DFC2ACECE9200686A35 /* CardRepository.swift in Sources */,
+				30B35A472AD0CBC6002A2E7F /* RecentlyViewedCard+Extensions.swift in Sources */,
 				3053A23C2ACD7C9E00EB4CC2 /* HomeViewController.swift in Sources */,
 				30802DF62ACECAF900686A35 /* CardsResult.swift in Sources */,
 				30802E0C2AD01C2900686A35 /* DataModel.xcdatamodeld in Sources */,
@@ -519,6 +538,7 @@
 				3053A1FD2ACD63E500EB4CC2 /* SceneDelegate.swift in Sources */,
 				3053A22E2ACD677A00EB4CC2 /* SplashViewController.swift in Sources */,
 				3053A2392ACD795400EB4CC2 /* ApplicationCoordinator.swift in Sources */,
+				30B35A412AD0B2F7002A2E7F /* RecentlyViewedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

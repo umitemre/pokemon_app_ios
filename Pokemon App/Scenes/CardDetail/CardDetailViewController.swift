@@ -76,9 +76,9 @@ class CardDetailViewController: BaseViewController {
             self.updateFavoriteButton()
         }.disposed(by: disposeBag)
 
-        viewModel?.cardResultDidChange.subscribe { [weak self] result in
+        viewModel?.cardResultDidChange.subscribe { [weak self] data in
             guard let self,
-                  let card = result.element?.card else { return }
+                  let card = data.element?.card else { return }
 
             self.card = card
         }.disposed(by: disposeBag)
